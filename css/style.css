@@ -67,3 +67,45 @@ footer {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Nav sempre horizontal, sem wrap, com scroll se precisar */
+nav .nav-menu {
+    display: flex; /* flex row */
+    flex-wrap: nowrap; /* não quebra linha */
+    overflow-x: auto; /* permite scroll horizontal */
+    white-space: nowrap; /* impede wrap de texto */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    -webkit-overflow-scrolling: touch; /* suaviza scroll em iOS */
+}
+
+/* Esconde a barra de rolagem (opcional) */
+nav .nav-menu::-webkit-scrollbar {
+    display: none;
+}
+nav .nav-menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Espaçamento entre itens */
+nav .nav-menu li {
+    flex: 0 0 auto; /* impede encolher ou crescer */
+    margin-right: 1.5rem;
+}
+
+/* Separador “|” só visual, sem poluir o HTML */
+nav .nav-menu li + li::before {
+    content: "|";
+    margin-right: 1rem;
+    color: currentColor;
+}
+
+/* Links */
+nav .nav-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.25rem 0;
+    display: inline-block;
+}
