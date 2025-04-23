@@ -73,3 +73,21 @@ nav {
 nav a {
     font-weight: bold;
 }
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    /* 1) faz a lista ter o mesmo “container” do body */
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto; /* centraliza horizontalmente e afasta do topo */
+
+    /* 2) aplica fundo branco semi-opaco e borda arredondada */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+
+    /* 3) padding interno para dar altura à barra */
+    padding: 12px 0;
+}
