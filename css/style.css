@@ -53,52 +53,41 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Navbar simplificada ===== */
-.navbar {
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.nav-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 1rem;
+nav {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 12px 0;
 }
-.nav-container .brand {
-    margin-right: auto;
+nav a {
     font-weight: bold;
-    text-decoration: none;
-    color: inherit;
 }
+/* Remove marcadores e deixa tudo em linha */
 .nav-menu {
-    display: flex;
-    flex-wrap: wrap; /* permite quebra apenas em telas muito pequenas */
-    justify-content: flex-end; /* alinha à direita */
     list-style: none;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* espaço entre itens */
     padding: 0;
+    margin: 0;
 }
-.nav-menu li {
-    margin-left: 1.5rem;
+
+/* Insere o separador sem poluir o HTML */
+.nav-menu li + li::before {
+    content: "|";
+    margin-right: 0.75rem; /* ajusta espaço após o separador */
+    color: currentColor; /* herda cor do link */
 }
+
+/* Links mais legíveis */
 .nav-menu a {
     text-decoration: none;
     font-weight: bold;
-    color: #333;
-}
-.nav-menu a:hover {
-    opacity: 0.8;
+    padding: 0.25rem 0.5rem;
+    transition: opacity 0.2s;
 }
 
-/* Quebra simples em mobile, sem hamburger */
-@media (max-width: 600px) {
-    .nav-menu {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 0.5rem;
-    }
-    .nav-menu li {
-        margin: 0.5rem 0;
-    }
+.nav-menu a:hover,
+.nav-menu a:focus {
+    opacity: 0.7;
 }
