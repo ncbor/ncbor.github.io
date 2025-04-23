@@ -52,34 +52,30 @@ footer {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-/* ===== Nav container ===== */
+
+/* ===== Navbar simplificada ===== */
 .navbar {
     background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .nav-container {
-    max-width: 900px; /* limitação de largura */
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 1rem;
     display: flex;
     align-items: center;
-    position: relative; /* para posicionar o menu móvel */
 }
-
-/* ===== Brand ===== */
-.brand {
-    font-size: 1.25rem;
-    font-weight: bold;
+.nav-container .brand {
     margin-right: auto;
+    font-weight: bold;
     text-decoration: none;
     color: inherit;
 }
-
-/* ===== Menu padrão ===== */
 .nav-menu {
-    list-style: none;
     display: flex;
-    flex-wrap: nowrap; /* NUNCA quebra */
+    flex-wrap: wrap; /* permite quebra apenas em telas muito pequenas */
+    justify-content: flex-end; /* alinha à direita */
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -89,58 +85,20 @@ footer {
 .nav-menu a {
     text-decoration: none;
     font-weight: bold;
-    white-space: nowrap; /* impede quebra interna */
+    color: #333;
+}
+.nav-menu a:hover {
+    opacity: 0.8;
 }
 
-/* ===== Toggle (hamburger) ===== */
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    content: "";
-    display: block;
-    width: 24px;
-    height: 3px;
-    background: #333;
-    border-radius: 2px;
-    position: relative;
-}
-.hamburger::before {
-    top: -7px;
-    position: absolute;
-}
-.hamburger::after {
-    top: 7px;
-    position: absolute;
-}
-
-/* ===== Mobile: aciona o hamburger ===== */
-@media (max-width: 700px) {
-    .nav-toggle {
-        display: block;
-    }
+/* Quebra simples em mobile, sem hamburger */
+@media (max-width: 600px) {
     .nav-menu {
-        display: none; /* esconde menu grande */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white;
         flex-direction: column;
-        padding: 1rem 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        align-items: flex-start;
+        margin-top: 0.5rem;
     }
     .nav-menu li {
         margin: 0.5rem 0;
-        text-align: center;
-    }
-    /* quando .nav-open estiver no body, mostramos o menu */
-    body.nav-open .nav-menu {
-        display: flex;
     }
 }
