@@ -73,32 +73,3 @@ nav {
 nav a {
     font-weight: bold;
 }
-/* Remove marcadores e deixa tudo em linha */
-.nav-menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem; /* espaço entre itens */
-    padding: 0;
-    margin: 0;
-}
-
-/* Insere o separador sem poluir o HTML */
-.nav-menu li + li::before {
-    content: "|";
-    margin-right: 0.75rem; /* ajusta espaço após o separador */
-    color: currentColor; /* herda cor do link */
-}
-
-/* Links mais legíveis */
-.nav-menu a {
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.25rem 0.5rem;
-    transition: opacity 0.2s;
-}
-
-.nav-menu a:hover,
-.nav-menu a:focus {
-    opacity: 0.7;
-}
