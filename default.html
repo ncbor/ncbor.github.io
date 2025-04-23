@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>{{ page.title | default: "Meu Site" }}</title>
+    </head>
+    <body>
+        <header>{% include nav.html %}</header>
+        <main class="container">{{ content }}</main>
+        <footer>© 2025 Seu Nome</footer>
+    </body>
+</html>

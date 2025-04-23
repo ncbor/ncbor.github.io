@@ -1,6 +1,11 @@
+---
+layout: default
+title: "Página Inicial"
+---
+
 <script>
-  // EXEMPLO GOOGLE ANALYTICS 4
-  /*
+    // EXEMPLO GOOGLE ANALYTICS 4
+    /*
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
@@ -12,8 +17,8 @@
   gtag('config', 'GA_MEASUREMENT_ID');
   */
 
-  // EXEMPLO PLAUSIBLE ANALYTICS
-  /*
+    // EXEMPLO PLAUSIBLE ANALYTICS
+    /*
   (function(){
     var p = document.createElement('script'); p.async = true;
     p.src = 'https://plausible.io/js/plausible.js';
@@ -24,13 +29,13 @@
 </script>
 
 <!-- index.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Página Inicial</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Google Analytics
+    <head>
+        <meta charset="UTF-8" />
+        <title>Página Inicial</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Google Analytics
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -39,29 +44,22 @@
   gtag('config', 'G-XXXXXXXXXX');
 </script>
  Fim Google Analytics -->
-</head>
-<body>
-  <nav>
-    <a href="index.html">Início</a> |
-    <a href="about.html">Sobre mim</a> |
-    <a href="blog/index.html">Blog</a> |
-    <a href="achados.html">Achados</a> |
-    <a href="hobbies.html">Passatempos</a> |
-    <a href="links.html">Links</a>
-  </nav>
-  <h1>Bem-vindo(a) ao meu site</h1>
-  <p>Sou [Seu Nome], e este é um lugar simples onde compartilho meus pensamentos, trabalhos e interesses.</p>
-  <h2>Conteúdos Atualizados Recentemente</h2>
-  <ul>
-    <!-- Exemplo de item recente -->
-    <li><a href="blog/post1.html">Título do post mais recente</a> - 2025-04-22</li>
-    <li><a href="achados.html">Achados</a> - 2025-04-20</li>
-    <!-- Adicione novos itens conforme publicações -->
-  </ul>
-  <footer>
-    <p>© 2025 [Seu Nome]</p>
-  </footer>
-</body>
+    </head>
+    <body>
+        <h1>Bem-vindo(a) ao meu site</h1>
+        <p>
+            Sou [Seu Nome], e este é um lugar simples onde compartilho meus
+            pensamentos, trabalhos e interesses.
+        </p>
+        <h2>Conteúdos Atualizados Recentemente</h2>
+        <ul>
+            <!-- Exemplo de item recente -->
+            <li>
+                <a href="blog/post1.html">Título do post mais recente</a> -
+                2025-04-22
+            </li>
+            <li><a href="achados.html">Achados</a> - 2025-04-20</li>
+            <!-- Adicione novos itens conforme publicações -->
+        </ul>
+    </body>
 </html>
-
-
