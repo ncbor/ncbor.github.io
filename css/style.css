@@ -52,52 +52,95 @@ footer {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* 1. Cria um wrapper centralizado com largura fixa/máxima */
-nav {
-    width: 100%; /* sempre 100% da viewport */
-    background: rgba(255, 255, 255, 0.9);
+/* ===== Nav container ===== */
+.navbar {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-nav .nav-container {
-    max-width: 900px; /* define o “corpo” do nav */
-    margin: 0 auto; /* centraliza */
-    padding: 0.5rem 1rem; /* espaçamento interno */
-}
-
-/* 2. Menu flexível mas bocado do container, nunca além */
-nav .nav-menu {
+.nav-container {
+    max-width: 900px; /* limitação de largura */
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
-    justify-content: space-between; /* links espaçados igualmente */
-    flex-wrap: nowrap; /* sem quebra de linha */
-    width: 100%; /* ocupa todo o nav-container */
+    align-items: center;
+    position: relative; /* para posicionar o menu móvel */
+}
+
+/* ===== Brand ===== */
+.brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: auto;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== Menu padrão ===== */
+.nav-menu {
     list-style: none;
+    display: flex;
+    flex-wrap: nowrap; /* NUNCA quebra */
     margin: 0;
     padding: 0;
 }
-
-/* 3. Links não empurram container: não quebram e encolhem se precisar */
-nav .nav-menu li {
-    flex: 1 1 auto; /* podem encolher, mas não crescer além */
-    text-align: center;
+.nav-menu li {
+    margin-left: 1.5rem;
 }
-nav .nav-menu a {
-    display: block;
-    white-space: nowrap; /* não quebra texto interno */
-    padding: 0.5rem;
+.nav-menu a {
     text-decoration: none;
     font-weight: bold;
+    white-space: nowrap; /* impede quebra interna */
 }
 
-/* 4. Separador “|” sem poluir HTML */
-nav .nav-menu li + li::before {
-    content: "|";
-    margin-right: 0.5rem;
-    color: currentColor;
+/* ===== Toggle (hamburger) ===== */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    position: relative;
+}
+.hamburger::before {
+    top: -7px;
+    position: absolute;
+}
+.hamburger::after {
+    top: 7px;
+    position: absolute;
 }
 
-/* 5. Responsividade: no ponto X, transforma em menu colapsável */
-@media (max-width: 600px) {
-    nav .nav-menu {
-        overflow-x: auto; /* scroll horizontal em telas muito estreitas */
+/* ===== Mobile: aciona o hamburger ===== */
+@media (max-width: 700px) {
+    .nav-toggle {
+        display: block;
+    }
+    .nav-menu {
+        display: none; /* esconde menu grande */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .nav-menu li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    /* quando .nav-open estiver no body, mostramos o menu */
+    body.nav-open .nav-menu {
+        display: flex;
     }
 }
