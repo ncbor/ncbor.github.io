@@ -35,8 +35,15 @@ title: "Blog"
                 >Setting up a test environment for Linux Kernel Dev using QEMU
                 and libvirt</a
             >
-            do grupo FLUSP. Minha dupla não conseguiu fazer no MacOS dele, então
-            fizemos ambos no meu notebook linux. A maioria dos passos deu certo,
+            do grupo FLUSP. O Gabriel, minha dupla, não conseguiu fazer no MacOS dele, então
+            fizemos ambos no meu notebook, rodando Arch Linux. Foi tranquilo de instalar a imagem apropriada, e o tutorial acabava aí.
+        </p>
+        <h3>Semana 2</h3>
+        <p>
+            Na segunda semana, o tutorial foi:
+            <a href="https://flusp.ime.usp.br/kernel/build-linux-for-arm/"
+                >Building and booting a custom Linux kernel for ARM</a
+            >.  Foi designado a nós o uso de kw durante as atividades. Amaioria dos passos deu certo,
             <b
                 >menos quando deixei o meu ssh aberto por 20 minutos com acesso
                 root sem senha para qualquer um que quisesse kkkkkkk</b
@@ -44,52 +51,48 @@ title: "Blog"
             Além disso, senti um pouco de dificuldade de internalizar o uso de
             VMs, que veio naturalmente conforme as outras aulas aconteceram.
         </p>
-        <h3>Semana 2</h3>
-        <p>
-            Na segunda semana, o tutorial foi:
-            <a href="https://flusp.ime.usp.br/kernel/build-linux-for-arm/"
-                >Building and booting a custom Linux kernel for ARM</a
-            >. Porém, foi a semana de problemas na eduroam, e tive que rodar
-            nossa conexão via 3g. No final das contas, após muito esperar as
-            etapas concluirem via internet móvel, não funcionou porque eu
-            deletei a bridge que conectava a VM ao ssh (ou algo assim). Fomos
-            para casa e só conseguimos resolver o problema de rede e completar o
-            tutorial 1 e 2 plenamente ao abrir uma máquina na CONTABO, essa que
-            nós dois utilizamos até hoje, resolvendo o problema do MacOS da
-            minha dupla.
-        </p>
         <h3>Semana 3</h3>
         <p>
-            Essa foi a primeira semana que conseguimos usar a VPS da CONTABO
-            plenamente. E, sem maiores delongas, conseguimos cumprir os
+            Essa foi a semana de problemas na eduroam, e tivemos que rodar
+            nossa conexão via 3g. No final das contas, após muito esperar as
+            etapas concluirem via internet móvel, não funcionou porque eu
+            deletei a bridge que conectava a VM ao ssh (ou algo assim). Ainda bem, salvou meus pacotes kkkkk. Fomos
+            para casa e só conseguimos resolver o problema do bridge deletado e completar o
+            tutorial 1 e 2 plenamente ao abrir uma máquina na CONTABO. Nós usamos ela até hoje, resolvendo o problema do MacOS da
+            minha dupla e permitindo que nós dois usássemos a mesma máquina para o desenvolvimento. E, sem maiores delongas, conseguimos cumprir os
             objetivos do tutorial<a
                 href="https://flusp.ime.usp.br/kernel/modules-intro/"
                 >Introduction to Linux kernel build configuration and modules</a
             >
-            sem grandes dificuldades.
+            sem outras grandes dificuldades.
         </p>
         <h3>Semana 4</h3>
         <p>
-            Eu e minha dupla não fomos nesse encontro, e nos comprometemos a
-            concluir o tutorial 4,
-            <a href="https://flusp.ime.usp.br/kernel/char-drivers-intro/"
+            Essa foi a primeira semana que conseguimos usar a VPS da CONTABO
+            plenamente durante o encontro. Realizamos então o tutorial 4 <a href="https://flusp.ime.usp.br/kernel/char-drivers-intro/"
                 >Introduction to Linux kernel Character Device Drivers</a
-            >, em casa. E deu certo! Concluimos a etapa 4 sem grandes problemas,
-            e agora estávamos prontos para começar nosso patch.
+            > sem nenhuma grande dificuldade, ainda mais com a GUI envolvida. Até aqui, o kw se mostrou uma mão na roda para simplificar os processos.
+            O que mais atrapalhou, no fim das contas, foi a demora da máquina da CONTABO para alguns procedimentos, principalmente buildar.
         </p>
-        <h3>Semana 5 + break</h3>
+        <h3>Semana 5</h3>
         <p>
-            Nessa semana, especificamente no dia do encontro, passei mal durante
-            a parte da manhã e não pude estar presencialmente na aula. Assim, o
-            Gabriel pegou todas informações (<a
+            Eu e Gabriel não fomos nesse encontro, e nos comprometemos a
+            concluir o tutorial 5, (<a
                 href="https://flusp.ime.usp.br/iio/iio-dummy-anatomy/"
                 >The iio_simple_dummy Anatomy</a
-            >) para que conseguissemos fazer o patch juntos durante o Break. E
-            assim foi feito, mesmo que tenha sido um pouco dificil de entender.
+            >), em casa. Por sorte nossa, esse tutorial não tinha nada pra fazer na prática,
+            apenas ler e entender a organização do IIO subsystem. Concluimos a etapa 5 sem grandes problemas,
+            e agora estávamos prontos para começar nosso patch.
+
+        <h3>Semana 6 + break</h3>
+            Nessa semana, especificamente no dia do encontro, passei mal durante
+            a parte da manhã e não pude estar presencialmente na aula. Assim, o
+            Gabriel pegou todas informações para que conseguissemos fazer o patch juntos durante o Break. E
+            assim foi feito, mesmo eu tendo que alcançar o andamento do Gabriel em algumas partes.
         </p>
         <p>
-            O Gabriel, minha dupla, decidiu então que nós trataríamos de
-            duplicações de código. Então, focamos em melhorar o código do
+            O Gabriel decidiu então que nós trataríamos de
+            duplicações de código, e como eu não fui na aula, aceitei a decisão. Então, focamos em melhorar o código do
             arquivo `adc/sc27xx_adc.c`. O trabalho consistiu em generalizar
             algumas funções internas, além de melhorar drásticamente (na minha
             opinião) a legibilidade do script, removendo alguns switches
@@ -106,7 +109,7 @@ title: "Blog"
                 >site do Gabriel</a
             >
         </p>
-        <h3>Semana 6: PITCH!</h3>
+        <h3>Semana 7: PITCH!</h3>
         <p>Upcoming...</p>
     </body>
 </html>
