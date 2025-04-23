@@ -1,9 +1,166 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!-- Estrutura de arquivos do repositório GitHub Pages -->
+
+/
+|- index.html          <!-- Página Inicial -->
+|- about.html          <!-- Sobre mim -->
+|- blog/
+|   |- index.html      <!-- Lista de posts -->
+|- achados.html        <!-- "Achados" (imagens e conteúdos) -->
+|- hobbies.html        <!-- Passatempos e coisas que gosto -->
+|- links.html          <!-- Links interessantes -->
+
+<!-- **************************************** -->
+<!-- Insira seu ID de rastreamento abaixo -->
+<!-- Exemplo Google Analytics 4: GA_MEASUREMENT_ID -->
+<!-- Ou use Plausible: seu domínio em data-domain -->
+<script>
+  // EXEMPLO GOOGLE ANALYTICS 4
+  /*
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+  */
+
+  // EXEMPLO PLAUSIBLE ANALYTICS
+  /*
+  (function(){
+    var p = document.createElement('script'); p.async = true;
+    p.src = 'https://plausible.io/js/plausible.js';
+    p.setAttribute('data-domain','SEU_DOMINIO.github.io');
+    document.head.appendChild(p);
+  })();
+  */
+</script>
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Inicial</title>
+  <!-- Google Analytics
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+ Fim Google Analytics -->
+</head>
+<body>
+  <nav>
+    <a href="index.html">Início</a> |
+    <a href="about.html">Sobre mim</a> |
+    <a href="blog/index.html">Blog</a> |
+    <a href="achados.html">Achados</a> |
+    <a href="hobbies.html">Passatempos</a> |
+    <a href="links.html">Links</a>
+  </nav>
+  <h1>Bem-vindo(a) ao meu site</h1>
+  <p>Sou [Seu Nome], e este é um lugar simples onde compartilho meus pensamentos, trabalhos e interesses.</p>
+  <h2>Conteúdos Atualizados Recentemente</h2>
+  <ul>
+    <!-- Exemplo de item recente -->
+    <li><a href="blog/post1.html">Título do post mais recente</a> - 2025-04-22</li>
+    <li><a href="achados.html">Achados</a> - 2025-04-20</li>
+    <!-- Adicione novos itens conforme publicações -->
+  </ul>
+  <footer>
+    <p>© 2025 [Seu Nome]</p>
+  </footer>
+</body>
+</html>
+
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sobre mim</title>
+  <!-- Inclua aqui o script de rastreamento ativado -->
+</head>
+<body>
+  <nav><!-- mesmo nav de index --></nav>
+  <h1>Sobre mim</h1>
+  <p>Aqui vai uma descrição completa sobre você: formação, interesses, projetos, etc.</p>
+</body>
+</html>
+
+<!-- blog/index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <!-- Inclua aqui o script de rastreamento ativado -->
+</head>
+<body>
+  <nav><!-- mesmo nav --></nav>
+  <h1>Blog</h1>
+  <ul>
+    <li><a href="post1.html">Post Exemplo</a> - 2025-04-22</li>
+    <!-- Liste os posts aqui -->
+  </ul>
+</body>
+</html>
+
+<!-- achados.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Achados</title>
+  <!-- Inclua aqui o script de rastreamento ativado -->
+</head>
+<body>
+  <nav><!-- mesmo nav --></nav>
+  <h1>Achados</h1>
+  <!-- Insira imagens ou links para conteúdos interessantes -->
+</body>
+</html>
+
+<!-- hobbies.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Passatempos</title>
+  <!-- Inclua aqui o script de rastreamento ativado -->
+</head>
+<body>
+  <nav><!-- mesmo nav --></nav>
+  <h1>Passatempos e coisas que gosto</h1>
+  <ul>
+    <li>Programação</li>
+    <li>Jogos</li>
+    <li>Leitura</li>
+    <!-- Adicione mais itens -->
+  </ul>
+</body>
+</html>
+
+<!-- links.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Links Interessantes</title>
+  <!-- Inclua aqui o script de rastreamento ativado -->
+</head>
+<body>
+  <nav><!-- mesmo nav --></nav>
+  <h1>Links Interessantes</h1>
+  <ul>
+    <li><a href="https://github.com">GitHub</a></li>
+    <li><a href="https://www.example.com">Exemplo</a></li>
+    <!-- Adicione seus links favoritos -->
+  </ul>
+</body>
 </html>
