@@ -14,7 +14,7 @@ title: "Blog"
     <body>
         <nav><!-- mesmo nav --></nav>
         <h1>Blog</h1>
-        <ul class="posts-list">
+        <!-- <ul class="posts-list">
             {% for post in site.posts %}
             <li class="card">
                 <a href="{{ post.url }}">{{ post.title }}</a>
@@ -25,6 +25,85 @@ title: "Blog"
                 <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
             </li>
             {% endfor %}
-        </ul>
+        </ul> -->
+        <h2>Jornada KERNEL</h2>
+        <h3>Semana 1</h3>
+        <p>
+            Na primeira semana, começamos a preparar o ambiente para buildar o
+            kernel através do tutorial
+            <a href="https://flusp.ime.usp.br/kernel/qemu-libvirt-setup/"
+                >Setting up a test environment for Linux Kernel Dev using QEMU
+                and libvirt</a
+            >
+            do grupo FLUSP. Minha dupla não conseguiu fazer no MacOS dele, então
+            fizemos ambos no meu notebook linux. A maioria dos passos deu certo,
+            menos quando deixei o meu ssh aberto por 20 minutos com acesso root
+            sem senha para qualquer um que quisesse kkkkkkk. Ainda bem que o
+            Davi logo interviu e reverteu isso. Dale IMEsec. Além disso, senti
+            um pouco de dificuldade de internalizar o uso de VMs, que veio
+            naturalmente conforme as outras aulas aconteceram.
+        </p>
+        <h3>Semana 2</h3>
+        <p>
+            Na segunda semana, o tutorial foi:
+            <a href="https://flusp.ime.usp.br/kernel/build-linux-for-arm/"
+                >Building and booting a custom Linux kernel for ARM</a
+            >. Porém, foi a semana de problemas na eduroam, e tive que rodar
+            nossa conexão via 3g. No final das contas, após muito esperar as
+            etapas concluirem via internet móvel, não funcionou porque eu
+            deletei a bridge que conectava a VM ao ssh (ou algo assim). Fomos
+            para casa e só conseguimos resolver o problema de rede e completar o
+            tutorial 1 e 2 plenamente ao abrir uma máquina na CONTABO, essa que
+            nós dois utilizamos até hoje, resolvendo o problema do MacOS da
+            minha dupla.
+        </p>
+        <h3>Semana 3</h3>
+        <p>
+            Essa foi a primeira semana que conseguimos usar a VPS da CONTABO
+            plenamente. E, sem maiores delongas, conseguimos cumprir os
+            objetivos do tutorial<a
+                href="https://flusp.ime.usp.br/kernel/modules-intro/"
+                >Introduction to Linux kernel build configuration and modules</a
+            >
+            sem grandes dificuldades.
+        </p>
+        <h3>Semana 4</h3>
+        <p>
+            Eu e minha dupla não fomos nesse encontro, e nos comprometemos a
+            concluir o tutorial 4,
+            <a href="https://flusp.ime.usp.br/kernel/char-drivers-intro/"
+                >Introduction to Linux kernel Character Device Drivers</a
+            >, em casa. E deu certo! Concluimos a etapa 4 sem grandes problemas,
+            e agora estávamos prontos para começar nosso patch.
+        </p>
+        <h3>Semana 5 + break</h3>
+        <p>
+            Nessa semana, especificamente no dia do encontro, passei mal durante
+            a parte da manhã e não pude estar presencialmente na aula. Assim, o
+            Gabriel pegou todas informações (<a
+                href="https://flusp.ime.usp.br/iio/iio-dummy-anatomy/"
+                >The iio_simple_dummy Anatomy</a
+            >) para que conseguissemos fazer o patch juntos durante o Break. E
+            assim foi feito, mesmo que tenha sido um pouco dificil de entender.
+        </p>
+        <p>
+            O Gabriel, minha dupla, decidiu então que nós trataríamos de
+            duplicações de código. Então, focamos em melhorar o código do
+            arquivo `adc/sc27xx_adc.c`. O trabalho consistiu em generalizar
+            algumas funções internas, além de melhorar drásticamente (na minha
+            opinião) a legibilidade do script, removendo alguns switches
+            <s>feios</s> que atrapalhavam. Nosso resultado consisstiu na nova
+            função `sc27xx_adc_scale_init` e na nova estrutura
+            `adc_channel_scale` (para guardar os dados dos PMIC). Assim,
+            acreditamos que alcançamos nossos objetivos estipulados para com
+            este arquivo.
+        </p>
+        <p>
+            O Gabriel que gerou o patch em si para enviar pro Davi, e disse que
+            não teve grandes dificuldades. Para mais informações, acesse o
+            <a href="https://www.linux.ime.usp.br/~apolo/mac0470/"
+                >site do Gabriel</a
+            >
+        </p>
     </body>
 </html>
