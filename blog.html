@@ -123,7 +123,7 @@ title: "Blog"
 </p><p>
             No arquivo <a href="https://github.com/kworkflow/kworkflow/blob/master/src/send_patch.sh">src/send_patch.sh</a>, fazer a seguinte alteração:
 </p><p>
-            <code>
+            <pre>
                 {
                 ...
                 
@@ -146,7 +146,7 @@ title: "Blog"
                 done
                 # ────────────────────────────────────────────────────────────────────
                 }   
-            </code>
+            </pre>
        </p><p>     Pelo o que eu entendi, cada patch escreve seu próprio to/cc baseado somente nos seus próprios subsistemas.
 </p><p>
             Então, com essas alterações, todas as listas particulares serão sobrescritas com a união de todas as listas antes individuais, agora deixando todos os patches com as mesmas listas to/cc.
