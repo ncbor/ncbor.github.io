@@ -132,18 +132,19 @@ title: "Blog"
                 cc_list="$(sort -u "$cover_letter_cc")"
                 printf '%s\n' "$cc_list" > "$cover_letter_cc"
                 
-                # ────────────────────────────────────────────────────────────────────
-                # Override each patch’s own to/cc so all patches get the full union:
+                + # ────────────────────────────────────────────────────────────────────
+                + # Alterações começam aqui.
+                + # Sobrescreve as listas to/cc individuais.
                 
-                for f in "${patch_cache}/to/"*; do
-                    [[ "$(basename "$f")" == "cover-letter" ]] && continue
-                    printf '%s\n' "$to_list" > "$f"
-                done
-                for f in "${patch_cache}/cc/"*; do
-                    [[ "$(basename "$f")" == "cover-letter" ]] && continue
-                    printf '%s\n' "$cc_list" > "$f"
-                done
-                # ────────────────────────────────────────────────────────────────────
+                + for f in "${patch_cache}/to/"*; do
+                +     [[ "$(basename "$f")" == "cover-letter" ]] && continue
+                +     printf '%s\n' "$to_list" > "$f"
+                + done
+                + for f in "${patch_cache}/cc/"*; do
+                +     [[ "$(basename "$f")" == "cover-letter" ]] && continue
+                +     printf '%s\n' "$cc_list" > "$f"
+                + done
+                + # ────────────────────────────────────────────────────────────────────
                 }   
             </pre>
        </p><p>     Pelo o que eu entendi, cada patch escreve seu próprio to/cc baseado somente nos seus próprios subsistemas.
