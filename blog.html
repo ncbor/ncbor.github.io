@@ -111,5 +111,51 @@ title: "Blog"
         </p>
         <h3>Semana 7: PITCH!</h3>
         <p>Upcoming...</p>
+        <h3>ATUALIZAR ESSE BLOG COM O MEIO TEMPO</h3>
+        <p></p>
+
+        <h3>KW até agora</h3>
+        <p>
+            Estávamos entre Git e KW, e acho que vamos seguir no KW mesmo. Até agora, a ideia foi mexer com o issue 
+<a href="https://github.com/kworkflow/kworkflow/issues/1207">Patches to multiple subsystem don't loop in all the right people #1207</a>.
+
+            Pelo que eu vi e estive testando, a correção que cheguei foi a seguinte.
+
+            No arquivo <a href="https://github.com/kworkflow/kworkflow/blob/master/src/send_patch.sh">src/send_patch.sh</a>, fazer a seguinte alteração:
+
+            <code>
+                {
+                ...
+                
+                to_list="$(sort -u "$cover_letter_to")"
+                printf '%s\n' "$to_list" > "$cover_letter_to"
+                
+                cc_list="$(sort -u "$cover_letter_cc")"
+                printf '%s\n' "$cc_list" > "$cover_letter_cc"
+                
+                # ────────────────────────────────────────────────────────────────────
+                # Override each patch’s own to/cc so all patches get the full union:
+                
+                for f in "${patch_cache}/to/"*; do
+                    [[ "$(basename "$f")" == "cover-letter" ]] && continue
+                    printf '%s\n' "$to_list" > "$f"
+                done
+                for f in "${patch_cache}/cc/"*; do
+                    [[ "$(basename "$f")" == "cover-letter" ]] && continue
+                    printf '%s\n' "$cc_list" > "$f"
+                done
+                # ────────────────────────────────────────────────────────────────────
+                }   
+            </code>
+            Pelo o que eu entendi, cada patch escreve seu próprio to/cc baseado somente nos seus próprios subsistemas.
+
+            Então, com essas alterações, todas as listas particulares serão sobrescritas com a união de todas as listas antes individuais, agora deixando todos os patches com as mesmas listas to/cc.
+            
+            Dessa forma, quando o kw chamar a função `git send-email` (via to_cc_cmd.sh), todos os patches vão ter a mesma lista completa to/cc.
+
+            Ainda falta testar a build dessa forma. Foi a solução que eu cheguei em um primeiro momento, porém depois ouvi um dos monitores mantenedores me dizerem que talvez isso não seja um erro, e uma questão de permissão que o kw respeita corretamente.
+
+            Assim, estamos estudando outras issues para prosseguir nessa etapa do trabalho, por exemplo aquela indicada no <a href="https://www.linux.ime.usp.br/~apolo/mac0470/">blog da minha dupla</a>.
+    </p>
     </body>
 </html>
