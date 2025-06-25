@@ -111,15 +111,53 @@ title: "Blog"
         <h3>Semana 7: PITCH!</h3>
         <p></p>
 
-        <h3>Parte 2: KW</h3>
+        <h3><a href="https://lore.kernel.org/linux-iio/20250428034222.318898-1-gabrielgeraldinosouza@gmail.com/T/#u">Fim do Kernel :)</a></h3>
+
+        <h2>Parte 2: KW</h2>
+
+        <p>No começo, cogitamos mexer com pacotes como Pacman, ou Git, mais presentes no nosso dia a dia. Porém, após comparar as issues abertas e o fluxo de contribuição, preferimos seguir com o <code>kw</code> em vez das outras possibilidades.</p>
+        <p>A princípio, iriamos mexer com a issue <a href="https://github.com/kworkflow/kworkflow/issues/1207">#1207</a>, que trata sobre a lista de email para edições em mais de um subsystem do kernel. Porém, após falar com o Davi, percebemos que poderia ser uma escolha do kw fazer as coisas do jeito que a issue reclama. Então, decidimos mexer na issue <a href="https://github.com/kworkflow/kworkflow/issues/1185">#1185</a>, cujo problema consiste em envs diferentes com o mesmo nome em worktrees diferentes compartilham configurações e sobrescrevem arquivos compilados.</p>
+    <pre><code>
+    Description:
+
+    If an user creates two environments with the same name, but in different repositories and therefore, different config files, compiled files and kw settings, the latest environment used replaces everything from the previous one.
+
+    How to Reproduce:
+
+    Clone two different kernel repositories
+    Create a kw env with the same name, for example, LOCAL
+    Setup and compile file in repository 1 under LOCAL env.
+    In another tab, use the LOCAL env in repository 2. it will use everything from LOCAL env in repository 1.
+
+    </code></pre>
+
+    <h3>Solução</h3>
+    <p>Nossa ideia consiste em usar base64 do pwd para contornar esse problema. Primeiramente, pensamos em adicionar um sufixo ao nome do env, e os próximos passos podem ser vistos abaixo. Vale notar que a partir daqui, a maior parte do desenvolvimento foi feita juntamente por <b></b>discord</b></p>
+        
+    <h3>Primeiro Pull Request</h3>
+    <p>Nosso primeiro PR consistiu na implementação dessa ideia, com sete commits. Porém, antes de tudo, o rodrigosiqueira respondeu para organizarmos os commits de forma mais enxuta, direta ao ponto. Além disso, pediu para que não usassemos sufixos, mas sim um diretório único e exclusivo com o <code>base64(pwd)</code>. Também foi notado que estávamos alterando o contexto local, sendo que o problema só ocorria no contexto global. Finalmente, foram pedidos testes no mesmo commit das novas funções, e reforçou para que seguissemos o guideline de codestyle do kw.</p>
+
+    <h3>Segundo Pull Request</h3>
+    <p>No segundo push adotou-se então o novo formato de codificação, reorganização de commits, adição de testes, e aplicação do codestyle. A solução apresentada aqui foi a solução final enviada por nós:</p>
+        <pre><code>${cache_build_path}/${ENV_DIR}/${encoded_pwd}/${current_env_name}</code></pre>
+    <p>O siqueira novamente respondeu com algumas recomendações de edição, sendo a principal delas a adição de uma função que migrará os ambientes dos usuários de kw para o novo formato, nomeada por ele como <code>migrate_old_env_to_base64</code>. Basicamente, ela verifica estrutura de diretórios no cache e invocá-la logo no início de main em kw_env.sh</p>
+
+    <h3>Terceiro Pull Request</h3>
+    <p>A migração foi implementada, acompanhada de novos testes e correção de bugs. Os commits relevantes foram registrados conforme abaixo:</p>
+    <pre><code>
+999ed24 Introduz função para codificar $PWD
+79d1b07 Ajusta funções para usar PWD codificado como cache_build_path
+4f517ce Migra ambientes existentes para novo caminho
+    </code></pre>
+    <p>O comando de listagem de ambientes agora detecta diretório antigo, aplica migração automática antes de listar e remove operações destrutivas diretas, garantindo compatibilidade retroativa.</p>
+    <p>Estamos no aguardo da resposta dele, dispostos a contribuir com o que mais for necessário. Aliás, pessoalmente estive interessado em realizar outras contribuições após mexer com o kw, cuja experiência foi mais leve e engajante do que contribuir com o kernel, e mais aprofundada do que a contribuição debian abaixo. Também vale notar que o Gabriel está com uma ideia nova e vai criar uma nova issue no repositório do kworkflow.</p>
+    <p>Para imagens, entre no <a href="https://www.linux.ime.usp.br/~apolo/mac0470/">no site do Gabriel</a>, pois não consegui adicionar aqui :).</p>
 
 
 
 
 
-
-
-        <h3>Parte 3: Jornada Debian</h3>
+        <h2>Parte 3: Jornada Debian</h2>
         <p>Nas duas últimas aulas da disciplina antes dos pitches finais, nosso professor Paulo apresentou Charles e Lucas Kanashiro, mantenedores do Debian Brasil. A experiência de conhecer esses contribuintes experientes e entender seu papel no projeto foi bem interessante, além de serem bastante carismáticos e explicativos.</p>
         <p>Após as palestras, ficamos encarregados de atualizar alguns pacotes do ecossistema Debian. Meu pacote foi o <code>dhcpig</code>, que integra o componente main, subsystem net, fornecendo um utilitário de auditoria de rede para simular ataques de esgotamento de alocação DHCP.</p>
         <p>Na parte de empacotamento, editamos o arquivo <code>debian/control</code> para atualizar a versão, commitamos, e em seguida geramos outro commit contendo o changelog do anterior (presente em <code>debian/changelog</code>). Se engana quem acha que é simples assim: Charles e Lucas deixaram tudo na boca do gol para nós, arrumando todos os outros trechos de código necessários antes da aula.</p> 
@@ -134,7 +172,7 @@ title: "Blog"
         <h3>.</h3>
         <h3>.</h3>
         <h3>.</h3>
-        <h3>CAMINHOS</h3>
+        <h2>CAMINHOS</h2>
         <p>Pretendo seguir a trilha da Pós. Como não tem ainda no <a href="https://bcc.ime.usp.br/trilhas/">site oficial do BCC</a>, também manifesto aqui meu interesse em seguir a trilha de Teoria da Computação.</p>
 
 
