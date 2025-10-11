@@ -83,23 +83,21 @@ body {
 }
 
 /* Footer minimalista */
-.minimal-footer {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
-    padding: 0.5rem;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
-    font-size: 0.9rem;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 0;
-    pointer-events: none; /* does not block clicks */
-    margin-top: var(--space-2xl);
-
+.minimal-footer{
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: 0.9rem;
+  width: 100%;
+  margin-top: var(--space-2xl);
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
 }
-/* Footer */
+
 
 /* Layout */
 .container {
