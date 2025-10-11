@@ -7,6 +7,7 @@
     padding: 0;
 }
 
+
 :root {
     /* Color Palette */
     --primary-color: #2563eb;
@@ -63,6 +64,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+body > *:not(.minimal-footer) { position: relative; z-index: 1; }
+
 
 /* Orientação horizontal - aguas2.jpg */
 @media (orientation: landscape) {
@@ -83,18 +86,22 @@ body {
 }
 
 /* Footer minimalista */
-.minimal-footer{
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-  padding: 0.5rem;
-  text-align: center;
-  color: rgba(255, 255, 255, 1);
-  font-size: 0.9rem;
-  width: 100%;
-  margin-top: var(--space-2xl);
-  position: static;
-  z-index: 0;
-  pointer-events: none;
+.minimal-footer {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    padding: 0.5rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.9rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    z-index: 0;
+    pointer-events: none; /* does not block clicks */
+
 }
 
 /* Layout */
