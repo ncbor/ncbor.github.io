@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Blog"
+permalink: /pages/blog/
+---
+
+<h1>Blog</h1>
+<p>Meus pensamentos, trabalhos e interesses em desenvolvimento e tecnologia.</p>
+
+<ul class="posts-list">
+    {% for post in site.posts %}
+    <li>
+        <a href="{{ post.url }}" class="post-item">
+            <h3 class="post-title">{{ post.title }}</h3>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+            <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%d de %B de %Y" }}
+            </time>
+        </a>
+    </li>
+    {% endfor %}
+</ul>

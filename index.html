@@ -52,23 +52,35 @@ title: "Página Inicial"
     </head>
     <body>
         <h1>Um certo site...</h1>
-        <p>
-            Sou Nícolas Caldas Borsari, e este é um lugar simples onde
-            compartilho meus pensamentos, trabalhos e interesses.
+        <p class="glass--lg">
+            Parabéns! Você achou meu cantinho na internet.<br><br>Meu nome é Nícolas C. Borsari, e você pode ver mais de mim na aba <i>Sobre</i>
+            
+	    <br><br>A parte mais interessante, talvez, seja a aba <i>Blog</i>, onde compartilho ideias e projetos do meu dia a dia. Aos professores, provavelmente o que procuram está por lá (Caminhos, Software Livre, MAC0214, etc)
+
+	    <br><br><i>Achados</i> tem algumas coisas que eu gosto, <i>Links</i> é um compilado de links úteis/interessantes, Hobbies ainda está por vir. 
+
+
         </p>
-        <p>
-            O site ainda está em construção! Os posts sobre o KERNEL podem ser
-            vistos em BLOG.
-        </p>
-        <h2>Conteúdos Atualizados Recentemente</h2>
+	<p class="glass--lg">
+
+	<b>Cuidado por onde pisa! O site ainda está em construção</b>
+	<br><br>Uma dica: Recomendo o zoom de 130% a 150% para melhor visualização do site :) </p>
+	<div class="category">
+	<h2>Novos Posts:</h2>
+	<div class="glass">
         <ul>
-            <!-- Exemplo de item recente -->
+            {% for post in site.posts limit:7 %}
             <li>
-                <a href="blog/post1.html">Título do post mais recente</a> -
-                2025-04-22
+                <a href="{{ post.url }}">{{ post.title }}</a> -
+                {{ post.date | date: "%d/%m/%Y" }}
             </li>
-            <li><a href="achados.html">Achados</a> - 2025-04-20</li>
-            <!-- Adicione novos itens conforme publicações -->
+            {% endfor %}
+	    <!-- <li><a href="achados.html">Achados</a> - 20/04/2025</li> 
+
+
+	    Além disso, investigar o espaço misterioso no fim dessa porra. E entender pq o glass ta ficando com borda branca ainda -->
         </ul>
+	</div>
+	</div>
     </body>
 </html>
