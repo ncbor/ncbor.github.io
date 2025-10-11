@@ -397,6 +397,7 @@ footer {
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: var(--space-sm);
+    margin-top: 0;
 }
 
 .post-excerpt {
