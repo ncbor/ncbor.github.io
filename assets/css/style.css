@@ -90,15 +90,16 @@ body {
     text-align: center;
     color: rgba(255, 255, 255, 1);
     font-size: 0.9rem;
-    position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
     z-index: 0;
     pointer-events: none; /* does not block clicks */
+    margin-top: var(--space-2xl);
 
 }
+/* Footer */
 
 /* Layout */
 .container {
