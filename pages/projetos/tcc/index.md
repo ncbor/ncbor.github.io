@@ -27,12 +27,13 @@ tabs: true
 # Design de Algoritmos e Plataformas Orientados ao Desenvolvimento Humano
 {: style="text-align: center;"}
 
-Tese de Conclusão de Curso\
-Bacharelado em Ciência da Computação\
-Instituto de Matemática, Estatística e Ciência da Computação (IME - USP)\
+Tese de Conclusão de Curso<br>
+Bacharelado em Ciência da Computação<br>
+Instituto de Matemática, Estatística e Ciência da Computação<br>
 Universidade de São Paulo
 {: style="text-align: center;"}
-Aluno: Nícolas Caldas Borsari\
+
+Aluno: Nícolas Caldas Borsari (IME - USP)<br>
 Orientador: Prof. Dr. Daniel Abs (e-lab, IP - USP)
 {: style="text-align: center;"}
 
