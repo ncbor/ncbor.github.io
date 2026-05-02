@@ -7,7 +7,7 @@
 **Nícolas Caldas Borsari**
 *Bacharelando em Ciència da Computação*
 *Instituto de Matemática e Estatística (IME-USP)*
-nicborsari at usp dot br
+nicborsari at usp dot br 
 
 ---
 
