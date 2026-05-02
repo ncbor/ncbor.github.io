@@ -1,9 +1,28 @@
 ---
 layout: project
-title: "TCC"
+title: "TCC (2026)"
 permalink: /pages/projetos/tcc/
 tag: tcc
+tabs: true
 ---
+
+<div class="tab-nav">
+    <a class="tab-btn tab-btn--active">Proposta</a>
+    {% assign tcc_poster = site.static_files | where_exp: "f", "f.path contains 'projetos/tcc/poster.pdf'" | first %}
+    {% if tcc_poster %}
+    <a class="tab-btn" href="/pages/projetos/tcc/poster/">Poster</a>
+    {% else %}
+    <a class="tab-btn" onclick="alert('Aguarde!')">Poster</a>
+    {% endif %}
+    {% assign tcc_mono = site.static_files | where_exp: "f", "f.path contains 'projetos/tcc/monografia.pdf'" | first %}
+    {% if tcc_mono %}
+    <a class="tab-btn" href="/pages/projetos/tcc/monografia/">Monografia</a>
+    {% else %}
+    <a class="tab-btn" onclick="alert('Aguarde!')">Monografia</a>
+    {% endif %}
+</div>
+
+<div class="glass--lg" markdown="1">
 
 # Design de Algoritmos e Plataformas Orientados ao Desenvolvimento Humano
 {: style="text-align: center;"}
@@ -98,3 +117,5 @@ Orientador: Prof. Dr. Daniel Abs (e-lab, IP - USP)
 [^bronfenbrenner1979]: BRONFENBRENNER, U. (1979). *The Ecology of Human Development: Experiments by Nature and Design*. Harvard University Press.
 
 [^abs2022]: ABS, D. (2022). *Contextos Digitais*. e-lab, Instituto de Psicologia, USP.
+
+</div>

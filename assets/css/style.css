@@ -254,17 +254,23 @@ nav a {
     padding: var(--space-sm) var(--space-md);
     margin: 0 var(--space-xs);
     border-radius: 0;
+    border-bottom: none;
+    text-shadow: none;
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
     color: var(--text-secondary);
     white-space: nowrap;
     text-align: center;
+    text-decoration: none;
 }
 
 nav a:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border-radius: 0;
+    border-bottom: none;
+    text-shadow: none;
+    transform: none;
 }
 
 /* Footer */
@@ -492,23 +498,30 @@ footer {
     margin-bottom: var(--space-xl);
 }
 
-.tab-nav label {
+.tab-nav label,
+.tab-btn {
     cursor: pointer;
     padding: var(--space-sm) var(--space-lg);
     background: var(--bg-overlay);
     color: rgba(255, 255, 255, 0.6);
-    border-radius: 4px;
+    border-radius: 0;
     font-weight: 600;
     transition: background 0.2s, color 0.2s;
+    text-decoration: none;
 }
 
-.tab-nav label:hover {
+.tab-nav label:hover,
+.tab-btn:hover {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+    border-bottom: none;
+    text-shadow: none;
 }
 
 #tab-midias:checked ~ .tab-nav label[for="tab-midias"],
-#tab-links:checked ~ .tab-nav label[for="tab-links"] {
+#tab-links:checked ~ .tab-nav label[for="tab-links"],
+.tab-btn--active {
     background: rgba(255, 255, 255, 0.2);
     color: #ffffff;
 }
@@ -541,6 +554,24 @@ footer {
     font-size: 1.5rem;
     font-weight: 600;
     margin: var(--space-lg) 0 var(--space-sm) 0;
+}
+
+/* PDF layout */
+.pdf-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.pdf-page .tab-nav {
+    margin-bottom: var(--space-sm);
+}
+
+.pdf-viewer iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    display: block;
 }
 
 .card {

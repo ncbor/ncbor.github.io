@@ -83,16 +83,17 @@ bundle exec jekyll build
 │   ├── default.html     # Layout padrão
 │   ├── post.html        # Layout para posts
 │   ├── project.html     # Layout para projetos
+│   ├── pdf.html         # Embed de PDF via iframe
 │   └── webart.html      # Layout do index
 │
 ├── _includes/          
-│   ├── head.html        # Tags e CSS
+│   ├── head.html        # Tags, favicon e CSS
 │   └── nav.html         # Barra de Navegação
 │
 ├── _posts/              # Posts do blog
 │
 ├── pages/               # Páginas do site      
-│   ├── index.md          # Home real
+│   ├── index.md         # Home real
 │   ├── blog.html        # Blog pessoal
 │   ├── misc.html        # Curadoria de mídias e links
 │   ├── projetos.html    # Projetos homepage
@@ -101,7 +102,7 @@ bundle exec jekyll build
 └── assets/              
     ├── css/             
     │   └── style.css   
-    └── images/          # Imagens do site
+    └── images/          # Imagens compartilhadas
         ├── aguas2.jpg        # Fundo landscape
         ├── quadriculados.jpg # Fundo portrait
         └── (...)            
