@@ -1,0 +1,79 @@
+---
+layout: default
+title: "Projetos"
+permalink: /pages/projetos/
+---
+
+<h1>Meus Projetos</h1>
+
+<!-- =============================================
+     TEMPLATE PARA NOVO PROJETO:
+
+     <div class="category">
+       <h2>Nome do Projeto</h2>
+       <div class="glass--lg">
+         <p>Descrição estática do projeto.</p>
+       </div>
+       {% assign proj_posts = site.posts | where_exp: "post", "post.tags contains 'tag-do-projeto'" %}
+       {% if proj_posts.size > 0 %}
+       <div class="glass">
+         <ul>
+           {% for post in proj_posts %}
+           <li>
+             <a href="{{ post.url }}">{{ post.title }}</a> —
+             {{ post.date | date: "%d/%m/%Y" }}
+           </li>
+           {% endfor %}
+         </ul>
+       </div>
+       {% endif %}
+     </div>
+     ============================================= -->
+
+<div class="category">
+  <h2><a href="/pages/projetos/tcc/">TCC</a></h2>
+  <div class="glass--lg">
+    <p>
+	Registros da construção do meu TCC, atualmente entitulado <b>Design de Algoritmos e Plataformas Orientados ao Desenvolvimento Humano.</b> 
+    </p>
+    <p>
+    	Atualmente contém apenas o projeto e planejamento inicial.
+    </p>
+    <p><a href="/pages/projetos/tcc/">Ver página do projeto →</a></p>
+  </div>
+</div>
+
+<div class="category">
+  <h2><a href="/pages/projetos/representacao-discente/">Representação Discente</a></h2>
+  <div class="glass--lg">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant
+      morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    </p>
+    <p><a href="/pages/projetos/representacao-discente/">Ver página do projeto →</a></p>
+  </div>
+</div>
+
+<div class="category">
+  <h2><a href="/pages/projetos/imesec/">IMEsec</a></h2>
+  <div class="glass--lg">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant
+      morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    </p>
+    <p><a href="/pages/projetos/imesec/">Ver página do projeto →</a></p>
+  </div>
+</div>
+
+
+<div class="category">
+  <h2><a href="/pages/projetos/iniciacao-cientifica/">Iniciação Científica</a></h2>
+  <div class="glass--lg">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant
+      morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    </p>
+    <p><a href="/pages/projetos/iniciacao-cientifica/">Ver página do projeto →</a></p>
+  </div>
+</div>
+

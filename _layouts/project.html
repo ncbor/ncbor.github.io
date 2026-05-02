@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="project-page">
+  <h1>{{ page.title }}</h1>
+
+  <div class="glass--lg">
+    {{ content }}
+  </div>
+
+  {% assign proj_posts = site.posts | where_exp: "post", "post.tags contains page.tag" %}
+  {% if proj_posts.size > 0 %}
+  <div class="glass">
+    <h3>Posts sobre este projeto:</h3>
+    <ul>
+      {% for post in proj_posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> —
+        {{ post.date | date: "%d/%m/%Y" }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <p style="margin-top: 1.5rem;">
+    <a href="/pages/projetos/">← Voltar para Projetos</a>
+  </p>
+</div>

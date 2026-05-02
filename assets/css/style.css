@@ -19,7 +19,7 @@
     --text-muted: #e2e8f0;
     --bg-primary: rgba(0, 0, 0, 0.3);
     --bg-secondary: rgba(0, 0, 0, 0.3);
-    --bg-overlay: rgba(0, 0, 0, 0.3);
+    --bg-overlay: rgba(0, 0, 0, 0.6);
     --border-color: #e2e8f0;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -229,21 +229,6 @@ pre code {
     color: var(--text-primary);
 }
 
-/* Cards */
-.card {
-    background: var(--bg-primary);
-    padding: var(--space-lg);
-    margin-bottom: var(--space-lg);
-    border-radius: 0;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
-    transition: all 0.2s ease;
-}
-
-.card:hover {
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
-}
 
 /* Navigation */
 nav {
@@ -321,7 +306,6 @@ footer {
         font-size: 1.5rem;
     }
 }
-/* Reusable frosted block */
 .glass {
   background: var(--bg-overlay);
   backdrop-filter: blur(10px);
@@ -331,16 +315,14 @@ footer {
   padding: var(--space-lg);
 }
 
-/* Larger, centered variant like .coming-soon-content */
 .glass--lg {
-  background: var(--bg-overlay);
+  background: rgba(0,0,0,0); 
   backdrop-filter: blur(10px);
   padding: var(--space-2xl);
   box-shadow: var(--shadow-lg);
-  text-align: center;
+  /* text-align: center; */
 }
 
-/* Post specific styles */
 .post {
     max-width: none;
 }
@@ -498,6 +480,69 @@ footer {
 }
 
 
+/* Misc tabs */
+#tab-midias,
+#tab-links {
+    display: none;
+}
+
+.tab-nav {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+}
+
+.tab-nav label {
+    cursor: pointer;
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--bg-overlay);
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+.tab-nav label:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#tab-midias:checked ~ .tab-nav label[for="tab-midias"],
+#tab-links:checked ~ .tab-nav label[for="tab-links"] {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+#content-midias,
+#content-links {
+    display: none;
+}
+
+#tab-midias:checked ~ #content-midias,
+#tab-links:checked ~ #content-links {
+    display: block;
+}
+
+.project-page h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+}
+
+.project-page h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin: var(--space-xl) 0 var(--space-md) 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.project-page h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: var(--space-lg) 0 var(--space-sm) 0;
+}
+
 .card {
     background: var(--bg-overlay);
     border-radius: 0;
@@ -596,4 +641,3 @@ footer {
 }
 
 
-/* TIRAR AS TRALHAS NAO UTILIZADAS PQP QQ É ISSO*/
