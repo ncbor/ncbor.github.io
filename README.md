@@ -34,31 +34,9 @@ nicborsari at usp dot br
 
 3. Escreva o conteúdo em Markdown
 
-## Adicionar Imagem na Galeria
+## Adicionar Mídia ou Link
 
-1. Adicione imagem em `assets/images/`
-2. Edite `pages/achados.html`:
-   ```html
-   <div class="gallery-item">
-       <img src="/assets/images/nova-imagem.jpg" alt="Descrição" loading="lazy">
-       <div class="gallery-caption">Legenda da imagem</div>
-   </div>
-   ```
-
-## Adicionar Link
-
-1. Edite `pages/links.html`
-2. Adicione novo card:
-   ```html
-   <div class="link-card">
-       <div class="link-icon">🔗</div>
-       <div class="link-content">
-           <h3><a href="https://exemplo.com" target="_blank">Nome do Site</a></h3>
-           <p>Descrição do link</p>
-           <span class="link-tag">Categoria</span>
-       </div>
-   </div>
-   ```
+1. Edite `pages/misc.html` na aba correspondente (Mídias ou Links)
 
 ---
 
@@ -95,35 +73,37 @@ bundle exec jekyll build
 
 ```tree ncbor.github.io/
 .
-├── config.yml           # Configuração principal do Jekyll
+├── _config.yml          # Configuração principal do Jekyll
 ├── Gemfile              # Dependências Ruby
 ├── Gemfile.lock         
 ├── README.md            
+├── index.md             # webart decoy como index rs 
 │
-├── index.html           # Página inicial
-│
-├── layouts/             
+├── _layouts/             
 │   ├── default.html     # Layout padrão
-│   └── post.html        # Layout para posts
+│   ├── post.html        # Layout para posts
+│   ├── project.html     # Layout para projetos
+│   └── webart.html      # Layout do index
 │
 ├── _includes/          
-│   ├── head.html        # Meta tags e CSS
+│   ├── head.html        # Tags e CSS
 │   └── nav.html         # Barra de Navegação
 │
 ├── _posts/              # Posts do blog
 │
 ├── pages/               # Páginas do site      
-│   ├── about.html
-│   ├── blog.html  
-│   ├── achados.html      
-│   ├── hobbies.html 
-│   └── links.html    
+│   ├── index.md          # Home real
+│   ├── blog.html        # Blog pessoal
+│   ├── misc.html        # Curadoria de mídias e links
+│   ├── projetos.html    # Projetos homepage
+│   └── projetos/        # Páginas dos projetos
 │
 └── assets/              
     ├── css/             
     │   └── style.css   
     └── images/          # Imagens do site
-        ├── 1.jpg        # Foto de fundo
+        ├── aguas2.jpg        # Fundo landscape
+        ├── quadriculados.jpg # Fundo portrait
         └── (...)            
 ```
 

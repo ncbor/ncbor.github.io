@@ -1,0 +1,255 @@
+<!-- achou meu site: https://ncbor.github.io/pages/ -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ncbor</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: #010d01;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                to bottom, transparent 0, transparent 3px,
+                rgba(0,0,0,0.07) 3px, rgba(0,0,0,0.07) 4px
+            );
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(ellipse at center,
+                transparent 20%, rgba(0,0,0,0.4) 72%, rgba(0,0,0,0.8) 100%
+            );
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .rain {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        .col {
+            position: absolute;
+            top: 0;
+            color: #00bb44;
+            font-size: 15px;
+            line-height: 1.7;
+            white-space: pre;
+            animation: fall linear infinite;
+            -webkit-mask-image: linear-gradient(to bottom,
+                transparent 0%, rgba(255,255,255,0.07) 12%,
+                rgba(255,255,255,0.32) 42%, rgba(255,255,255,0.78) 68%,
+                white 85%, transparent 100%
+            );
+            mask-image: linear-gradient(to bottom,
+                transparent 0%, rgba(255,255,255,0.07) 12%,
+                rgba(255,255,255,0.32) 42%, rgba(255,255,255,0.78) 68%,
+                white 85%, transparent 100%
+            );
+            text-shadow: 0 0 5px #00aa33;
+        }
+
+        .col.hi {
+            color: #bbffdd;
+            text-shadow: 0 0 8px #bbffdd, 0 0 18px #00ff66;
+        }
+
+        @keyframes fall {
+            from { transform: translateY(-100%); }
+            to   { transform: translateY(100vh); }
+        }
+
+        .grid {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 42vh;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="rain">
+    <span class="col"    style="left:1%;   animation-duration:2.6s; animation-delay:0s;    font-size:13px; opacity:.6">ｦ<br>ｱ<br>7<br>ｿ<br>4<br>ﾒ<br>2<br>ﾛ<br>9<br>ｺ<br>D<br>ﾏ<br>6<br>ｾ<br>Z<br>ﾉ<br>1<br>ｶ<br>8<br>ﾗ<br>3<br>ｹ</span>
+    <span class="col hi" style="left:3%;   animation-duration:3.8s; animation-delay:-1.4s">ﾊ<br>0<br>ｻ<br>G<br>ﾐ<br>5<br>ｸ<br>Y<br>ﾕ<br>3<br>ｳ<br>A<br>ﾆ<br>7<br>ｷ<br>m<br>ﾙ<br>2<br>ｹ<br>T<br>ﾑ<br>9</span>
+    <span class="col"    style="left:5%;   animation-duration:2.2s; animation-delay:-2.0s; opacity:.65">ﾋ<br>4<br>ｼ<br>Z<br>ﾃ<br>8<br>ｺ<br>b<br>ﾖ<br>1<br>ｿ<br>6<br>ﾁ<br>Y<br>ｩ<br>3<br>ﾘ<br>0<br>ｵ<br>9<br>ﾊ<br>5</span>
+    <span class="col"    style="left:7%;   animation-duration:4.2s; animation-delay:-0.8s; font-size:13px">ｧ<br>3<br>ﾄ<br>G<br>ｻ<br>7<br>ﾓ<br>2<br>ｶ<br>A<br>ﾈ<br>5<br>ｱ<br>9<br>ﾌ<br>4<br>ｾ<br>m<br>ﾝ<br>1<br>ｺ<br>6</span>
+    <span class="col hi" style="left:9%;   animation-duration:3.1s; animation-delay:-3.2s">D<br>ﾐ<br>4<br>ｷ<br>Z<br>ﾖ<br>8<br>ｴ<br>b<br>ﾔ<br>2<br>ｼ<br>6<br>ﾃ<br>T<br>ｻ<br>1<br>ﾗ<br>9<br>ｦ<br>5<br>ﾉ</span>
+    <span class="col"    style="left:11%;  animation-duration:2.5s; animation-delay:-1.0s; opacity:.6">ﾑ<br>7<br>ｸ<br>3<br>ﾜ<br>A<br>ｩ<br>6<br>ﾒ<br>0<br>ｿ<br>8<br>ﾋ<br>4<br>ｵ<br>Y<br>ﾙ<br>2<br>ｧ<br>9<br>ﾊ<br>5</span>
+    <span class="col"    style="left:13%;  animation-duration:3.5s; animation-delay:-2.4s; font-size:16px">ﾁ<br>8<br>ｶ<br>G<br>ﾘ<br>3<br>ｺ<br>Z<br>ﾅ<br>7<br>ｾ<br>m<br>ﾄ<br>1<br>ｲ<br>5<br>ﾂ<br>9<br>ｱ<br>4<br>ﾌ<br>2</span>
+    <span class="col hi" style="left:15%;  animation-duration:2.9s; animation-delay:-0.5s">ｦ<br>6<br>ﾗ<br>T<br>ｿ<br>2<br>ﾃ<br>8<br>ｷ<br>b<br>ﾑ<br>5<br>ｴ<br>A<br>ﾖ<br>3<br>ｻ<br>7<br>ﾊ<br>0<br>ｸ<br>9</span>
+    <span class="col"    style="left:17%;  animation-duration:4.4s; animation-delay:-3.5s; opacity:.55; font-size:13px">ﾋ<br>1<br>ｱ<br>Y<br>ﾒ<br>6<br>ｩ<br>3<br>ﾙ<br>9<br>ｶ<br>G<br>ﾝ<br>4<br>ｾ<br>Z<br>ﾅ<br>7<br>ｵ<br>2<br>ﾔ<br>8</span>
+    <span class="col"    style="left:19%;  animation-duration:2.3s; animation-delay:-1.8s">ﾂ<br>5<br>ｸ<br>m<br>ﾌ<br>0<br>ｼ<br>4<br>ﾄ<br>D<br>ｻ<br>8<br>ﾏ<br>2<br>ｳ<br>6<br>ﾈ<br>1<br>ｷ<br>9<br>ﾃ<br>3</span>
+    <span class="col hi" style="left:21%;  animation-duration:3.7s; animation-delay:-0.2s; font-size:14px">ｦ<br>7<br>ﾖ<br>A<br>ｺ<br>3<br>ﾒ<br>9<br>ｱ<br>T<br>ﾋ<br>5<br>ｾ<br>b<br>ﾑ<br>1<br>ｷ<br>8<br>ﾅ<br>4<br>ｿ<br>6</span>
+    <span class="col"    style="left:23%;  animation-duration:2.7s; animation-delay:-2.9s; opacity:.7">ﾗ<br>2<br>ｩ<br>Y<br>ﾛ<br>6<br>ｴ<br>0<br>ﾁ<br>G<br>ｵ<br>4<br>ﾂ<br>9<br>ｶ<br>Z<br>ﾄ<br>3<br>ｻ<br>7<br>ﾘ<br>5</span>
+    <span class="col"    style="left:25%;  animation-duration:4.0s; animation-delay:-1.3s">ﾈ<br>8<br>ｸ<br>m<br>ﾍ<br>1<br>ｼ<br>5<br>ﾉ<br>D<br>ｲ<br>3<br>ﾐ<br>7<br>ｧ<br>A<br>ﾓ<br>9<br>ｹ<br>2<br>ﾙ<br>6</span>
+    <span class="col hi" style="left:27%;  animation-duration:3.2s; animation-delay:-0.7s; font-size:15px">4<br>ﾝ<br>ｦ<br>8<br>ﾊ<br>T<br>ｾ<br>2<br>ﾒ<br>b<br>ｶ<br>6<br>ﾖ<br>0<br>ｱ<br>Y<br>ﾃ<br>5<br>ｿ<br>3<br>ﾑ<br>9</span>
+    <span class="col"    style="left:29%;  animation-duration:2.4s; animation-delay:-2.2s; opacity:.6">ｩ<br>1<br>ﾁ<br>G<br>ｸ<br>7<br>ﾌ<br>4<br>ｴ<br>Z<br>ﾗ<br>2<br>ｵ<br>m<br>ﾄ<br>8<br>ｷ<br>5<br>ﾘ<br>0<br>ｻ<br>3</span>
+    <span class="col"    style="left:31%;  animation-duration:3.9s; animation-delay:-1.1s; font-size:14px">ﾋ<br>6<br>ｼ<br>D<br>ﾅ<br>9<br>ｹ<br>A<br>ﾛ<br>4<br>ｲ<br>7<br>ﾏ<br>1<br>ｧ<br>T<br>ﾕ<br>5<br>ｺ<br>8<br>ﾂ<br>2</span>
+    <span class="col hi" style="left:33%;  animation-duration:2.8s; animation-delay:-3.8s">ﾈ<br>3<br>ｦ<br>Y<br>ﾍ<br>7<br>ｾ<br>b<br>ﾐ<br>0<br>ｶ<br>5<br>ﾉ<br>G<br>ｱ<br>4<br>ﾓ<br>9<br>ｿ<br>Z<br>ﾊ<br>2</span>
+    <span class="col"    style="left:35%;  animation-duration:4.3s; animation-delay:-0.6s; opacity:.65">ｩ<br>8<br>ﾖ<br>m<br>ｸ<br>1<br>ﾙ<br>6<br>ｴ<br>D<br>ﾒ<br>4<br>ｵ<br>A<br>ﾁ<br>9<br>ｷ<br>2<br>ﾃ<br>7<br>ｻ<br>5</span>
+    <span class="col"    style="left:37%;  animation-duration:2.6s; animation-delay:-1.9s; font-size:16px">ﾌ<br>0<br>ｼ<br>T<br>ﾄ<br>3<br>ｹ<br>b<br>ﾗ<br>8<br>ｲ<br>G<br>ﾅ<br>5<br>ｧ<br>Y<br>ﾘ<br>1<br>ｺ<br>7<br>ﾝ<br>4</span>
+    <span class="col hi" style="left:39%;  animation-duration:3.4s; animation-delay:-2.6s">ﾋ<br>6<br>ｦ<br>Z<br>ﾛ<br>9<br>ｾ<br>m<br>ﾑ<br>2<br>ｶ<br>A<br>ﾍ<br>7<br>ｱ<br>D<br>ﾏ<br>4<br>ｿ<br>0<br>ﾂ<br>8</span>
+    <span class="col"    style="left:41%;  animation-duration:2.1s; animation-delay:-0.9s; opacity:.7; font-size:13px">ｩ<br>3<br>ﾐ<br>T<br>ｸ<br>6<br>ﾖ<br>1<br>ｴ<br>b<br>ﾒ<br>8<br>ｵ<br>G<br>ﾁ<br>5<br>ｷ<br>9<br>ﾗ<br>2<br>ｻ<br>7</span>
+    <span class="col"    style="left:43%;  animation-duration:3.6s; animation-delay:-3.0s">ﾉ<br>4<br>ｼ<br>Y<br>ﾄ<br>0<br>ｹ<br>Z<br>ﾈ<br>6<br>ｲ<br>m<br>ﾌ<br>3<br>ｧ<br>A<br>ﾘ<br>8<br>ｺ<br>D<br>ﾝ<br>5</span>
+    <span class="col hi" style="left:45%;  animation-duration:2.9s; animation-delay:-1.4s; font-size:14px">ﾋ<br>1<br>ｦ<br>T<br>ﾛ<br>7<br>ｾ<br>b<br>ﾑ<br>3<br>ｶ<br>G<br>ﾍ<br>9<br>ｱ<br>Y<br>ﾏ<br>4<br>ｿ<br>Z<br>ﾂ<br>6</span>
+    <span class="col"    style="left:47%;  animation-duration:4.1s; animation-delay:-2.3s; opacity:.6">ﾐ<br>2<br>ｩ<br>m<br>ﾖ<br>8<br>ｸ<br>A<br>ﾒ<br>5<br>ｴ<br>D<br>ﾁ<br>0<br>ｵ<br>b<br>ﾗ<br>6<br>ｷ<br>9<br>ﾃ<br>3</span>
+    <span class="col"    style="left:49%;  animation-duration:2.7s; animation-delay:-0.4s">ｻ<br>4<br>ﾆ<br>G<br>ｼ<br>9<br>ﾓ<br>2<br>ｱ<br>Z<br>ﾔ<br>7<br>ｿ<br>m<br>ﾕ<br>1<br>ｶ<br>5<br>ﾗ<br>8<br>ｹ<br>3</span>
+    <span class="col hi" style="left:51%;  animation-duration:3.3s; animation-delay:-1.7s; font-size:13px">ﾛ<br>6<br>ｴ<br>A<br>ﾜ<br>0<br>ｵ<br>T<br>ﾃ<br>4<br>ｷ<br>b<br>ﾏ<br>8<br>ｸ<br>Y<br>ﾙ<br>3<br>ｺ<br>Z<br>ﾒ<br>7</span>
+    <span class="col"    style="left:53%;  animation-duration:2.4s; animation-delay:-3.6s; opacity:.55">ﾊ<br>5<br>ｩ<br>D<br>ﾁ<br>1<br>ｾ<br>G<br>ﾖ<br>9<br>ｲ<br>m<br>ﾌ<br>4<br>ｧ<br>A<br>ﾄ<br>6<br>ｱ<br>T<br>ﾝ<br>2</span>
+    <span class="col"    style="left:55%;  animation-duration:4.5s; animation-delay:-0.8s; font-size:16px">ﾈ<br>7<br>ｼ<br>b<br>ﾍ<br>3<br>ｻ<br>Z<br>ﾅ<br>0<br>ｶ<br>Y<br>ﾘ<br>5<br>ｵ<br>G<br>ﾂ<br>9<br>ｹ<br>m<br>ﾉ<br>1</span>
+    <span class="col hi" style="left:57%;  animation-duration:2.8s; animation-delay:-2.1s">ｦ<br>8<br>ﾋ<br>D<br>ｼ<br>4<br>ﾒ<br>A<br>ｷ<br>6<br>ﾖ<br>T<br>ｱ<br>1<br>ﾑ<br>9<br>ｿ<br>Z<br>ﾁ<br>3<br>ｶ<br>7</span>
+    <span class="col"    style="left:59%;  animation-duration:3.5s; animation-delay:-1.5s; opacity:.7; font-size:14px">ﾗ<br>0<br>ｩ<br>Y<br>ﾄ<br>6<br>ｴ<br>b<br>ﾐ<br>2<br>ｵ<br>G<br>ﾃ<br>8<br>ｸ<br>m<br>ﾛ<br>4<br>ｻ<br>Z<br>ﾒ<br>9</span>
+    <span class="col"    style="left:61%;  animation-duration:2.2s; animation-delay:-4.0s; opacity:.6">ﾅ<br>5<br>ｼ<br>T<br>ﾕ<br>1<br>ｹ<br>A<br>ﾌ<br>7<br>ｲ<br>D<br>ﾏ<br>3<br>ｧ<br>b<br>ﾘ<br>0<br>ｺ<br>Y<br>ﾝ<br>6</span>
+    <span class="col hi" style="left:63%;  animation-duration:3.9s; animation-delay:-0.3s">ﾊ<br>4<br>ｦ<br>G<br>ﾖ<br>9<br>ｾ<br>Z<br>ﾑ<br>2<br>ｶ<br>m<br>ﾍ<br>7<br>ｱ<br>T<br>ﾂ<br>5<br>ｿ<br>A<br>ﾈ<br>1</span>
+    <span class="col"    style="left:65%;  animation-duration:2.6s; animation-delay:-2.7s; font-size:13px">ｩ<br>8<br>ﾋ<br>b<br>ｸ<br>3<br>ﾖ<br>Y<br>ｴ<br>6<br>ﾒ<br>D<br>ｵ<br>0<br>ﾁ<br>G<br>ｷ<br>4<br>ﾗ<br>m<br>ｻ<br>9</span>
+    <span class="col"    style="left:67%;  animation-duration:4.2s; animation-delay:-1.2s">ﾄ<br>2<br>ｼ<br>Z<br>ﾈ<br>7<br>ｹ<br>T<br>ﾌ<br>5<br>ｲ<br>A<br>ﾅ<br>1<br>ｧ<br>b<br>ﾘ<br>8<br>ｺ<br>Y<br>ﾝ<br>3</span>
+    <span class="col hi" style="left:69%;  animation-duration:2.9s; animation-delay:-3.4s; font-size:15px">ﾊ<br>6<br>ｦ<br>G<br>ﾛ<br>0<br>ｾ<br>D<br>ﾑ<br>4<br>ｶ<br>Z<br>ﾍ<br>9<br>ｱ<br>m<br>ﾃ<br>2<br>ｿ<br>T<br>ﾂ<br>7</span>
+    <span class="col"    style="left:71%;  animation-duration:3.3s; animation-delay:-0.7s; opacity:.65">ｩ<br>5<br>ﾐ<br>Y<br>ｸ<br>8<br>ﾖ<br>b<br>ｴ<br>1<br>ﾒ<br>G<br>ｵ<br>4<br>ﾁ<br>A<br>ｷ<br>7<br>ﾗ<br>Z<br>ｻ<br>3</span>
+    <span class="col"    style="left:73%;  animation-duration:2.5s; animation-delay:-2.0s; font-size:14px">ﾄ<br>0<br>ｼ<br>m<br>ﾈ<br>6<br>ｹ<br>D<br>ﾌ<br>9<br>ｲ<br>T<br>ﾅ<br>3<br>ｧ<br>Y<br>ﾘ<br>5<br>ｺ<br>b<br>ﾝ<br>8</span>
+    <span class="col hi" style="left:75%;  animation-duration:4.4s; animation-delay:-1.6s">ﾊ<br>2<br>ｦ<br>A<br>ﾛ<br>7<br>ｾ<br>G<br>ﾑ<br>0<br>ｶ<br>Z<br>ﾍ<br>5<br>ｱ<br>m<br>ﾂ<br>9<br>ｿ<br>T<br>ﾖ<br>4</span>
+    <span class="col"    style="left:77%;  animation-duration:2.3s; animation-delay:-3.9s; opacity:.7; font-size:13px">ｩ<br>1<br>ﾋ<br>b<br>ｸ<br>6<br>ﾒ<br>Y<br>ｴ<br>4<br>ﾁ<br>D<br>ｵ<br>8<br>ﾃ<br>G<br>ｷ<br>2<br>ﾗ<br>Z<br>ｻ<br>7</span>
+    <span class="col"    style="left:79%;  animation-duration:3.7s; animation-delay:-0.5s">ﾄ<br>3<br>ｼ<br>T<br>ﾈ<br>8<br>ｹ<br>A<br>ﾌ<br>0<br>ｲ<br>m<br>ﾅ<br>6<br>ｧ<br>D<br>ﾘ<br>4<br>ｺ<br>Y<br>ﾝ<br>9</span>
+    <span class="col hi" style="left:81%;  animation-duration:2.7s; animation-delay:-2.4s; font-size:16px">ﾊ<br>5<br>ｦ<br>Z<br>ﾛ<br>1<br>ｾ<br>b<br>ﾑ<br>7<br>ｶ<br>G<br>ﾍ<br>3<br>ｱ<br>T<br>ﾂ<br>0<br>ｿ<br>m<br>ﾖ<br>8</span>
+    <span class="col"    style="left:83%;  animation-duration:4.1s; animation-delay:-1.0s; opacity:.6">ｩ<br>4<br>ﾐ<br>A<br>ｸ<br>9<br>ﾒ<br>Y<br>ｴ<br>2<br>ﾁ<br>Z<br>ｵ<br>6<br>ﾃ<br>D<br>ｷ<br>1<br>ﾗ<br>b<br>ｻ<br>5</span>
+    <span class="col"    style="left:85%;  animation-duration:2.4s; animation-delay:-3.2s; font-size:14px">ﾄ<br>7<br>ｼ<br>G<br>ﾈ<br>3<br>ｹ<br>m<br>ﾌ<br>8<br>ｲ<br>T<br>ﾅ<br>0<br>ｧ<br>A<br>ﾘ<br>5<br>ｺ<br>Z<br>ﾝ<br>2</span>
+    <span class="col hi" style="left:87%;  animation-duration:3.5s; animation-delay:-0.9s">ﾊ<br>9<br>ｦ<br>Y<br>ﾛ<br>4<br>ｾ<br>D<br>ﾑ<br>6<br>ｶ<br>b<br>ﾍ<br>1<br>ｱ<br>G<br>ﾂ<br>7<br>ｿ<br>Z<br>ﾖ<br>3</span>
+    <span class="col"    style="left:89%;  animation-duration:2.8s; animation-delay:-2.6s; opacity:.65; font-size:13px">ｩ<br>2<br>ﾋ<br>T<br>ｸ<br>8<br>ﾒ<br>m<br>ｴ<br>5<br>ﾁ<br>A<br>ｵ<br>1<br>ﾃ<br>Y<br>ｷ<br>6<br>ﾗ<br>b<br>ｻ<br>0</span>
+    <span class="col"    style="left:91%;  animation-duration:4.0s; animation-delay:-1.8s">ﾄ<br>4<br>ｼ<br>Z<br>ﾈ<br>9<br>ｹ<br>G<br>ﾌ<br>2<br>ｲ<br>D<br>ﾅ<br>7<br>ｧ<br>m<br>ﾘ<br>3<br>ｺ<br>T<br>ﾝ<br>8</span>
+    <span class="col hi" style="left:93%;  animation-duration:2.6s; animation-delay:-4.1s; font-size:15px">ﾊ<br>0<br>ｦ<br>A<br>ﾛ<br>6<br>ｾ<br>Y<br>ﾑ<br>3<br>ｶ<br>b<br>ﾍ<br>8<br>ｱ<br>Z<br>ﾂ<br>5<br>ｿ<br>G<br>ﾖ<br>1</span>
+    <span class="col"    style="left:95%;  animation-duration:3.8s; animation-delay:-0.3s; opacity:.6">ｩ<br>7<br>ﾐ<br>D<br>ｸ<br>2<br>ﾒ<br>T<br>ｴ<br>9<br>ﾁ<br>m<br>ｵ<br>4<br>ﾃ<br>A<br>ｷ<br>6<br>ﾗ<br>Y<br>ｻ<br>1</span>
+    <span class="col"    style="left:97%;  animation-duration:2.3s; animation-delay:-2.9s; font-size:13px; opacity:.55">ﾄ<br>5<br>ｼ<br>b<br>ﾈ<br>0<br>ｹ<br>Z<br>ﾌ<br>7<br>ｲ<br>G<br>ﾅ<br>3<br>ｧ<br>T<br>ﾘ<br>9<br>ｺ<br>D<br>ﾝ<br>4</span>
+    <span class="col"    style="left:2%;   animation-duration:3.1s; animation-delay:-1.7s; opacity:.5; font-size:12px">ｻ<br>8<br>ﾆ<br>Z<br>ｼ<br>3<br>ﾓ<br>A<br>ｱ<br>6<br>ﾔ<br>T<br>ｿ<br>1<br>ﾕ<br>m<br>ｶ<br>9<br>ﾗ<br>4<br>ｹ<br>b</span>
+    <span class="col hi" style="left:4%;   animation-duration:2.5s; animation-delay:-0.6s; font-size:14px">ﾛ<br>2<br>ｴ<br>G<br>ﾜ<br>7<br>ｵ<br>D<br>ﾃ<br>5<br>ｷ<br>Y<br>ﾏ<br>0<br>ｸ<br>Z<br>ﾙ<br>8<br>ｺ<br>A<br>ﾒ<br>3</span>
+    <span class="col"    style="left:6%;   animation-duration:4.3s; animation-delay:-3.1s; opacity:.6">ﾊ<br>4<br>ｩ<br>b<br>ﾁ<br>9<br>ｾ<br>m<br>ﾖ<br>1<br>ｲ<br>T<br>ﾌ<br>6<br>ｧ<br>G<br>ﾄ<br>2<br>ｱ<br>Y<br>ﾝ<br>7</span>
+    <span class="col"    style="left:8%;   animation-duration:2.8s; animation-delay:-1.3s; font-size:13px; opacity:.7">ﾅ<br>0<br>ｼ<br>Z<br>ﾈ<br>5<br>ｹ<br>A<br>ﾍ<br>8<br>ｲ<br>D<br>ﾏ<br>3<br>ｧ<br>b<br>ﾘ<br>7<br>ｺ<br>m<br>ﾂ<br>1</span>
+    <span class="col hi" style="left:10%;  animation-duration:3.6s; animation-delay:-2.5s">ｦ<br>6<br>ﾋ<br>T<br>ｼ<br>2<br>ﾒ<br>Y<br>ｷ<br>9<br>ﾖ<br>G<br>ｱ<br>4<br>ﾑ<br>Z<br>ｿ<br>0<br>ﾁ<br>m<br>ｶ<br>8</span>
+    <span class="col"    style="left:12%;  animation-duration:2.1s; animation-delay:-0.4s; opacity:.55; font-size:16px">ﾗ<br>3<br>ｩ<br>A<br>ﾄ<br>7<br>ｴ<br>b<br>ﾐ<br>1<br>ｵ<br>D<br>ﾃ<br>5<br>ｸ<br>T<br>ﾛ<br>9<br>ｻ<br>Y<br>ﾒ<br>2</span>
+    <span class="col"    style="left:14%;  animation-duration:4.0s; animation-delay:-3.7s; opacity:.65">ﾅ<br>6<br>ｼ<br>G<br>ﾕ<br>0<br>ｹ<br>Z<br>ﾌ<br>4<br>ｲ<br>m<br>ﾏ<br>8<br>ｧ<br>A<br>ﾘ<br>3<br>ｺ<br>b<br>ﾝ<br>7</span>
+    <span class="col hi" style="left:16%;  animation-duration:3.2s; animation-delay:-1.0s; font-size:14px">ﾊ<br>5<br>ｦ<br>T<br>ﾛ<br>1<br>ｾ<br>Y<br>ﾑ<br>9<br>ｶ<br>D<br>ﾍ<br>4<br>ｱ<br>G<br>ﾂ<br>7<br>ｿ<br>Z<br>ﾖ<br>2</span>
+    <span class="col"    style="left:18%;  animation-duration:2.4s; animation-delay:-2.8s; opacity:.6">ｩ<br>8<br>ﾋ<br>m<br>ｸ<br>3<br>ﾒ<br>A<br>ｴ<br>6<br>ﾁ<br>b<br>ｵ<br>0<br>ﾃ<br>T<br>ｷ<br>5<br>ﾗ<br>Y<br>ｻ<br>9</span>
+    <span class="col"    style="left:20%;  animation-duration:3.9s; animation-delay:-0.2s; font-size:13px">ﾄ<br>1<br>ｼ<br>G<br>ﾈ<br>7<br>ｹ<br>Z<br>ﾌ<br>4<br>ｲ<br>D<br>ﾅ<br>9<br>ｧ<br>m<br>ﾘ<br>2<br>ｺ<br>T<br>ﾝ<br>6</span>
+    <span class="col hi" style="left:22%;  animation-duration:2.7s; animation-delay:-4.2s">ﾊ<br>3<br>ｦ<br>A<br>ﾛ<br>8<br>ｾ<br>b<br>ﾑ<br>0<br>ｶ<br>Y<br>ﾍ<br>5<br>ｱ<br>Z<br>ﾂ<br>1<br>ｿ<br>G<br>ﾖ<br>7</span>
+    <span class="col"    style="left:24%;  animation-duration:4.4s; animation-delay:-1.6s; opacity:.7; font-size:15px">ｩ<br>4<br>ﾐ<br>D<br>ｸ<br>9<br>ﾒ<br>m<br>ｴ<br>2<br>ﾁ<br>T<br>ｵ<br>6<br>ﾃ<br>Y<br>ｷ<br>1<br>ﾗ<br>A<br>ｻ<br>8</span>
+    <span class="col"    style="left:28%;  animation-duration:2.2s; animation-delay:-0.8s; opacity:.55">ﾄ<br>5<br>ｼ<br>b<br>ﾈ<br>0<br>ｹ<br>Z<br>ﾌ<br>8<br>ｲ<br>G<br>ﾅ<br>3<br>ｧ<br>T<br>ﾘ<br>6<br>ｺ<br>D<br>ﾝ<br>1</span>
+    <span class="col hi" style="left:32%;  animation-duration:3.5s; animation-delay:-3.3s; font-size:13px">ﾊ<br>7<br>ｦ<br>Y<br>ﾛ<br>2<br>ｾ<br>A<br>ﾑ<br>5<br>ｶ<br>m<br>ﾍ<br>0<br>ｱ<br>b<br>ﾂ<br>9<br>ｿ<br>Z<br>ﾖ<br>4</span>
+    <span class="col"    style="left:36%;  animation-duration:2.9s; animation-delay:-1.1s; opacity:.65">ｩ<br>6<br>ﾋ<br>G<br>ｸ<br>1<br>ﾒ<br>T<br>ｴ<br>8<br>ﾁ<br>D<br>ｵ<br>4<br>ﾃ<br>m<br>ｷ<br>3<br>ﾗ<br>Y<br>ｻ<br>9</span>
+    <span class="col"    style="left:40%;  animation-duration:4.1s; animation-delay:-2.4s; font-size:16px">ﾄ<br>2<br>ｼ<br>Z<br>ﾈ<br>7<br>ｹ<br>A<br>ﾌ<br>5<br>ｲ<br>b<br>ﾅ<br>0<br>ｧ<br>G<br>ﾘ<br>8<br>ｺ<br>T<br>ﾝ<br>3</span>
+    <span class="col hi" style="left:44%;  animation-duration:2.6s; animation-delay:-0.5s">ﾊ<br>9<br>ｦ<br>m<br>ﾛ<br>4<br>ｾ<br>Y<br>ﾑ<br>1<br>ｶ<br>D<br>ﾍ<br>6<br>ｱ<br>Z<br>ﾂ<br>3<br>ｿ<br>A<br>ﾖ<br>8</span>
+    <span class="col"    style="left:48%;  animation-duration:3.7s; animation-delay:-3.6s; opacity:.6; font-size:14px">ｩ<br>0<br>ﾐ<br>b<br>ｸ<br>5<br>ﾒ<br>G<br>ｴ<br>7<br>ﾁ<br>T<br>ｵ<br>2<br>ﾃ<br>Y<br>ｷ<br>9<br>ﾗ<br>Z<br>ｻ<br>4</span>
+    <span class="col"    style="left:52%;  animation-duration:2.3s; animation-delay:-1.9s; opacity:.7">ﾄ<br>6<br>ｼ<br>A<br>ﾈ<br>1<br>ｹ<br>m<br>ﾌ<br>4<br>ｲ<br>D<br>ﾅ<br>8<br>ｧ<br>b<br>ﾘ<br>3<br>ｺ<br>G<br>ﾝ<br>7</span>
+    <span class="col hi" style="left:56%;  animation-duration:4.2s; animation-delay:-0.7s; font-size:13px">ﾊ<br>5<br>ｦ<br>T<br>ﾛ<br>0<br>ｾ<br>Z<br>ﾑ<br>8<br>ｶ<br>Y<br>ﾍ<br>2<br>ｱ<br>A<br>ﾂ<br>6<br>ｿ<br>m<br>ﾖ<br>3</span>
+    <span class="col"    style="left:60%;  animation-duration:3.0s; animation-delay:-2.7s; opacity:.55; font-size:15px">ｩ<br>1<br>ﾋ<br>D<br>ｸ<br>7<br>ﾒ<br>b<br>ｴ<br>4<br>ﾁ<br>G<br>ｵ<br>9<br>ﾃ<br>T<br>ｷ<br>0<br>ﾗ<br>Y<br>ｻ<br>5</span>
+    <span class="col"    style="left:64%;  animation-duration:2.5s; animation-delay:-1.2s; opacity:.65">ﾄ<br>8<br>ｼ<br>Z<br>ﾈ<br>3<br>ｹ<br>m<br>ﾌ<br>6<br>ｲ<br>A<br>ﾅ<br>1<br>ｧ<br>D<br>ﾘ<br>5<br>ｺ<br>b<br>ﾝ<br>9</span>
+    <span class="col hi" style="left:68%;  animation-duration:3.8s; animation-delay:-4.0s; font-size:14px">ﾊ<br>2<br>ｦ<br>G<br>ﾛ<br>7<br>ｾ<br>T<br>ﾑ<br>4<br>ｶ<br>Y<br>ﾍ<br>0<br>ｱ<br>Z<br>ﾂ<br>8<br>ｿ<br>A<br>ﾖ<br>5</span>
+    <span class="col"    style="left:72%;  animation-duration:2.1s; animation-delay:-0.9s; opacity:.6">ｩ<br>3<br>ﾋ<br>m<br>ｸ<br>8<br>ﾒ<br>b<br>ｴ<br>1<br>ﾁ<br>D<br>ｵ<br>6<br>ﾃ<br>G<br>ｷ<br>4<br>ﾗ<br>T<br>ｻ<br>9</span>
+    <span class="col"    style="left:76%;  animation-duration:4.3s; animation-delay:-2.2s; font-size:13px; opacity:.7">ﾄ<br>0<br>ｼ<br>Y<br>ﾈ<br>5<br>ｹ<br>Z<br>ﾌ<br>2<br>ｲ<br>A<br>ﾅ<br>7<br>ｧ<br>m<br>ﾘ<br>4<br>ｺ<br>b<br>ﾝ<br>1</span>
+    <span class="col hi" style="left:80%;  animation-duration:2.8s; animation-delay:-1.5s">ﾊ<br>6<br>ｦ<br>D<br>ﾛ<br>3<br>ｾ<br>G<br>ﾑ<br>9<br>ｶ<br>T<br>ﾍ<br>1<br>ｱ<br>Y<br>ﾂ<br>7<br>ｿ<br>b<br>ﾖ<br>4</span>
+    <span class="col"    style="left:84%;  animation-duration:3.4s; animation-delay:-3.8s; opacity:.55; font-size:16px">ｩ<br>5<br>ﾋ<br>Z<br>ｸ<br>0<br>ﾒ<br>m<br>ｴ<br>8<br>ﾁ<br>A<br>ｵ<br>3<br>ﾃ<br>D<br>ｷ<br>6<br>ﾗ<br>G<br>ｻ<br>2</span>
+    <span class="col"    style="left:88%;  animation-duration:2.6s; animation-delay:-0.4s; opacity:.65; font-size:14px">ﾄ<br>7<br>ｼ<br>T<br>ﾈ<br>2<br>ｹ<br>b<br>ﾌ<br>9<br>ｲ<br>Y<br>ﾅ<br>4<br>ｧ<br>Z<br>ﾘ<br>0<br>ｺ<br>G<br>ﾝ<br>6</span>
+    <span class="col hi" style="left:92%;  animation-duration:4.1s; animation-delay:-2.0s; font-size:13px">ﾊ<br>1<br>ｦ<br>A<br>ﾛ<br>8<br>ｾ<br>m<br>ﾑ<br>5<br>ｶ<br>D<br>ﾍ<br>3<br>ｱ<br>T<br>ﾂ<br>9<br>ｿ<br>Y<br>ﾖ<br>0</span>
+    <span class="col"    style="left:96%;  animation-duration:2.9s; animation-delay:-1.3s; opacity:.6">ｩ<br>4<br>ﾋ<br>b<br>ｸ<br>7<br>ﾒ<br>Z<br>ｴ<br>2<br>ﾁ<br>G<br>ｵ<br>6<br>ﾃ<br>A<br>ｷ<br>1<br>ﾗ<br>m<br>ｻ<br>8</span>
+    <span class="col"    style="left:99%;  animation-duration:3.3s; animation-delay:-4.4s; opacity:.5; font-size:12px">ﾄ<br>3<br>ｼ<br>T<br>ﾈ<br>9<br>ｹ<br>D<br>ﾌ<br>5<br>ｲ<br>Y<br>ﾅ<br>1<br>ｧ<br>b<br>ﾘ<br>7<br>ｺ<br>Z<br>ﾝ<br>4</span>
+</div>
+
+<svg class="grid" viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+
+
+	<defs>
+        <filter id="gl">
+            <feGaussianBlur stdDeviation="1.2" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+
+        <linearGradient id="linefade" x1="720" y1="0" x2="720" y2="500" gradientUnits="userSpaceOnUse">
+        <!--     <stop offset="0%"   stop-color="#00ff88" stop-opacity="0"/> -->
+        <!--     <stop offset="50%"  stop-color="#00ff88" stop-opacity="0"/> -->
+        <!--     <stop offset="75%"  stop-color="#00ff88" stop-opacity="0.3"/> -->
+            <stop offset="0%" stop-color="#00ff88" stop-opacity="0.3"/>
+        </linearGradient>
+
+        <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <radialGradient id="vpfade" cx="720" cy="-100" r="550" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#010d01" stop-opacity="1"/>
+            <stop offset="35%"  stop-color="#010d01" stop-opacity="1"/>
+            <stop offset="70%"  stop-color="#010d01" stop-opacity="0.7"/>
+            <stop offset="100%" stop-color="#010d01" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+
+    <!-- radial lines, step 72, VP(720,0) -->
+    <g stroke="url(#linefade)" stroke-width="2" filter="url(#neon)">
+        <line x1="720" y1="0" x2="-576"  y2="500"/>
+        <line x1="720" y1="0" x2="-504"  y2="500"/>
+        <line x1="720" y1="0" x2="-432"  y2="500"/>
+        <line x1="720" y1="0" x2="-360"  y2="500"/>
+        <line x1="720" y1="0" x2="-288"  y2="500"/>
+        <line x1="720" y1="0" x2="-216"  y2="500"/>
+        <line x1="720" y1="0" x2="-144"  y2="500"/>
+        <line x1="720" y1="0" x2="-72"   y2="500"/>
+        <line x1="720" y1="0" x2="0"     y2="500"/>
+        <line x1="720" y1="0" x2="72"    y2="500"/>
+        <line x1="720" y1="0" x2="144"   y2="500"/>
+        <line x1="720" y1="0" x2="216"   y2="500"/>
+        <line x1="720" y1="0" x2="288"   y2="500"/>
+        <line x1="720" y1="0" x2="360"   y2="500"/>
+        <line x1="720" y1="0" x2="432"   y2="500"/>
+        <line x1="720" y1="0" x2="504"   y2="500"/>
+        <line x1="720" y1="0" x2="576"   y2="500"/>
+        <line x1="720" y1="0" x2="648"   y2="500"/>
+        <line x1="720" y1="0" x2="720"   y2="500"/>
+        <line x1="720" y1="0" x2="792"   y2="500"/>
+        <line x1="720" y1="0" x2="864"   y2="500"/>
+        <line x1="720" y1="0" x2="936"   y2="500"/>
+        <line x1="720" y1="0" x2="1008"  y2="500"/>
+        <line x1="720" y1="0" x2="1080"  y2="500"/>
+        <line x1="720" y1="0" x2="1152"  y2="500"/>
+        <line x1="720" y1="0" x2="1224"  y2="500"/>
+        <line x1="720" y1="0" x2="1296"  y2="500"/>
+        <line x1="720" y1="0" x2="1368"  y2="500"/>
+        <line x1="720" y1="0" x2="1440"  y2="500"/>
+        <line x1="720" y1="0" x2="1512"  y2="500"/>
+        <line x1="720" y1="0" x2="1584"  y2="500"/>
+        <line x1="720" y1="0" x2="1656"  y2="500"/>
+        <line x1="720" y1="0" x2="1728"  y2="500"/>
+        <line x1="720" y1="0" x2="1800"  y2="500"/>
+        <line x1="720" y1="0" x2="1872"  y2="500"/>
+        <line x1="720" y1="0" x2="1944"  y2="500"/>
+        <line x1="720" y1="0" x2="2016"  y2="500"/>
+    </g>
+
+    <!-- VP fade overlay -->
+    <rect x="0" y="0" width="1440" height="500" fill="url(#vpfade)"/>
+
+</svg>
+
+</body>
+</html>

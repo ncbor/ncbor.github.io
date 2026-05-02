@@ -1,7 +1,3 @@
 ---
-layout: default
-title: "Página Inicial"
+layout: webart
 ---
-
-# Nícolas Caldas Borsari
-

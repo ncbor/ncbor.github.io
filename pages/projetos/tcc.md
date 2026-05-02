@@ -27,7 +27,7 @@ Orientador: Prof. Dr. Daniel Abs (e-lab, IP - USP)
 
 ### 1.2 Cibersegurança e a dimensão psicológica
 
-(explorar como a violência, roubo, invasão, medo, violação tem uma relação direta com a vivência  humana, surgindo do meio digital (ciber)) - Urie Bronfenbrenner - Contextos Digitais 
+(explorar como a violência, roubo, invasão, medo, violação tem uma relação direta com a vivência  humana, surgindo do meio digital (ciber)) - Urie Bronfenbrenner[^bronfenbrenner1979] - Contextos Digitais[^abs2022]
 
 ### 1.3 Design de Algoritmo 
 
@@ -88,3 +88,13 @@ Orientador: Prof. Dr. Daniel Abs (e-lab, IP - USP)
 <br>
 
 ## Trabalhos futuros 
+
+<br>
+
+---
+
+## Referências
+
+[^bronfenbrenner1979]: BRONFENBRENNER, U. (1979). *The Ecology of Human Development: Experiments by Nature and Design*. Harvard University Press.
+
+[^abs2022]: ABS, D. (2022). *Contextos Digitais*. e-lab, Instituto de Psicologia, USP.
