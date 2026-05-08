@@ -161,7 +161,6 @@ em confecção
 ### PARTE 1.2
 
 [^abs2022]: ABS, D. (2022). *Contextos Digitais*. e-lab, Instituto de Psicologia, USP.
- 1.2
 
 [^akca2023]: AKÇA, Burak. Examining the breaching of personal data in cyberspace from the perspective of psychological violence. JOURNAL OF AWARENESS, 2023. DOI: https://doi.org/10.26809/joa.2013. Acesso em: 6 maio 2026.
 
@@ -239,5 +238,13 @@ em confecção
 
 
 [^azizi2025]: AZIZI, Ali; MOHAMMADI, Maliheh; SAMADZAI, Ajmal. AI IN CYBER DEFENSE: PRIVACY RISKS, PUBLIC TRUST, AND POLICY CHALLENGES. Jurnal Ilmiah Dinamika Sosial, v. 9, n. 1, 2025. DOI: https://doi.org/10.38043/jids.v9i1.6278. Acesso em: 6 maio 2026.
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var footnotes = document.querySelector('.footnotes');
+  var glass = document.querySelector('.glass--lg');
+  if (footnotes && glass) glass.appendChild(footnotes);
+});
+</script>
 
 </div>
