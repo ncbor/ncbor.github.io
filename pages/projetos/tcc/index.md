@@ -128,7 +128,7 @@ em confecção
 
 ## Referências
 
-### PARTE 1.1
+<!-- ### PARTE 1.1 -->
 
 [^bojic2024]: BOJIC, Ljubisa. AI alignment: Assessing the global impact of recommender systems. Futures, v. 160, p. 103383, 2024. DOI: https://doi.org/10.1016/j.futures.2024.103383. Acesso em: 6 maio 2026.
 
@@ -158,7 +158,7 @@ em confecção
 
 [^wang2023]: WANG, Xinwei. The impact of the application of algorithms in social media marketing on society. Lecture Notes in Education Psychology and Public Media, v. 9, n. 1, p. 424-431, 2023. DOI: https://doi.org/10.54254/2753-7048/9/20230319. Acesso em: 6 maio 2026.
 
-### PARTE 1.2
+<!-- ### PARTE 1.2 -->
 
 [^abs2022]: ABS, D. (2022). *Contextos Digitais*. e-lab, Instituto de Psicologia, USP.
 
@@ -197,7 +197,7 @@ em confecção
 [^tojin2025]: TOJIN, Samuel; STAMATOVIĆ-GAJIĆ, Bojana. The psychological effects of cybersecurity breaches among individuals in Nigeria. Glasnik javnog zdravlja, 2025. DOI: https://doi.org/10.5937/serbjph2502120t. Acesso em: 6 maio 2026.
 
 
-### AINDA NÃO UTILIZADOS
+<!-- ### AINDA NÃO UTILIZADOS -->
 
 [^abs2022]: ABS, D. (2022). Contextos Digitais. e-lab, Instituto de Psicologia, USP.
 
