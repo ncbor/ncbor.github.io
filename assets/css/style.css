@@ -63,6 +63,12 @@ body {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 /* Orientação horizontal - aguas2.jpg */
 @media (orientation: landscape) {
