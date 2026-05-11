@@ -62,9 +62,18 @@ Tais impactos de perda de autonomia, vulnerabilidade, ansiedade e desconfiança,
 
 ### 1.3 Design de Algoritmo 
 
-em confecção
+Tendo em vista que os impactos sociais dos algoritmos e plataformas digitais descritos acima se configuram como problemas de cibersegurança, não basta apenas trabalhar para minimizar os danos. A solução então se divide em duas partes: Redesenhar os principais sistemas informacionais utilizados pela sociedade brasileira a fim de abarcar as questões previamente descritas, e criar uma série de parâmetros e regulações para o desenvolvimento de novos algoritmos e plataformas e suas futuras atualizações.
 
-<br>
+Assim, o nosso trabalho deve ter como meta o design de algoritmos e plataformas orientados ao desenvolvimento humano, em contraposição à orientação atual quase exclusiva ao lucro e interesses opacos das grandes empresas de tecnologia. Para isso, precisaremos definir alguns princípios definidores deste tipo de design, e a literatura existente nos ajuda com alguns pontos de partida.
+
+**Fim da heurística de controle da atenção.** Para isso, é necessário construir interfaces que preservem a atenção e apoiam a autonomia, competência e vínculo dos usuários com os sistemas alvos de estudo. [^roffarello2025] [^roffarello2023] [^kozyreva2019]. Também é importante mudar a métrica de otimização para sair de engajamento puro em prol de metas como bem‑estar, coesão social, relações sociais significativas, comunicação plena, e aprendizagem, variando de acordo com o propósito da plataforma. [^metzler2023] [^roffarello2025] [^shin2024] [^villamil2024] [^autili2024]. Por fim, é necessário caracterizar, identificar, e extinguir os padrões de de design que exploram vulnerabilidades atencionais (por exemplo, o dito “infinite scroll”) e substituí‑los por interfaces que respeitam não só o tempo e foco mas também o propósito das plataformas a serem construídas [^roffarello2023] [^roffarello2025] [^gomes2025] [^kozyreva2019]
+
+**Transparência e participação como premissa.** Transparência, co‑configuração de incentivos, feedback útil, negociação coletiva, e conceitos como “human‑in‑the‑loop” devem estar dentre as bases fundadoras de todo design desses sistemas digitais [^zhang2022] [^ahmad2025]. Para isso, podem ser usadas técnicas como índices dinâmicos de transparência, “rótulos de nutrição digital”, explicações compreensíveis sobre como recomendações são geradas, entre outras [^hu2025] [^villamil2024] [^autili2024], além de co‑design não só com usuários mas com especialistas da área de foco da plataforma e do algoritmo, para que o sistema reflita as prioridades e vivências do grupo alvo e não só metas comerciais [^zhang2022] [^baumer2017] [^ahmad2025] [^villamil2024]. Também será necessário estudar o conceito de “capability approach”, que parece apropriado para a proposta [^ramachandran2025]. Por fim, é fundamental garantir que os usuários humanos detenham o controle e possam questionar e intervir nas decisões algorítmicas, que devem ser bem explicadas e declaradas para o amplo entendimento do público alvo [^villamil2024] [^autili2024] [^ahmad2025] [^zhang2022] [^nopas2025].
+
+**Orientação ao desenvolvimento humano.** Para isso, é necessário integrar teorias psicológicas/sociais no próprio desenho do algoritmo, como aquelas de Bronfenbrenner[^bronfenbrenner1979] e Abs[^abs2022]. Algumas das técnicas para se realizar isso são: combinar avaliação por métricas objetivas com estudos com usuários [^baumer2017] [^shin2024] [^tzimourta2025]; priorizar conteúdos de laços significativos, empatia e comportamentos pró‑sociabilidade, além de entender as heurísticas e reduzir a visibilidade de conteúdo tóxico e polarizador [^metzler2023] [^serttas2025]; criar sub‑ambientes digitais com regras/algoritmos distintos para debate político nuançado, suporte em saúde mental, aprendizagem colaborativa, e convivência cotidiana [^metzler2023] [^villamil2024].
+
+Em resumo, o design de algoritmos e plataformas orientado ao desenvolvimento humano exige uma mudança estrutural na heurística de captura de atenção e de dados pessoais em prol de sustentar autonomia, comunicação rica e uso pleno das tecnologias digitais pela população brasileira, centrando o mundo digital no humano e não nos interesses comerciais perpetrados pela ordenação da máquina e suas linguagens.
+
 
 ## 2 Objetivos
 
@@ -94,37 +103,41 @@ em confecção
 
 ### 3.3 Procedimentos de análise: Os dados coletados serão analisados a partir do modelo de análise dos Contextos Digitais (ABS, 2022). 
 
-<br>
 
-## 4 Analise 
 
-<br>
+<!-- <br> -->
+<!---->
+<!-- ## 4 Analise  -->
+<!---->
+<!-- <br> -->
+<!---->
+<!-- ## 5 Discussão  -->
+<!---->
+<!-- <br> -->
+<!---->
+<!-- ## 6 Propostas -->
+<!---->
+<!-- <br> -->
+<!---->
+<!-- --- -->
+<!---->
+<!-- <br> -->
+<!---->
+<!-- ## Próximos Passos -->
+<!---->
+<!-- <br> -->
+<!---->
+<!-- ## Perguntas em aberto -->
+<!---->
+<!-- <br> -->
+<!---->
+<!-- ## Trabalhos futuros  -->
+<!---->
+<!-- <br> -->
+<!---->
+<!-- --- -->
 
-## 5 Discussão 
 
-<br>
-
-## 6 Propostas
-
-<br>
-
----
-
-<br>
-
-## Próximos Passos
-
-<br>
-
-## Perguntas em aberto
-
-<br>
-
-## Trabalhos futuros 
-
-<br>
-
----
 
 ## Referências
 
@@ -196,18 +209,54 @@ em confecção
 
 [^tojin2025]: TOJIN, Samuel; STAMATOVIĆ-GAJIĆ, Bojana. The psychological effects of cybersecurity breaches among individuals in Nigeria. Glasnik javnog zdravlja, 2025. DOI: https://doi.org/10.5937/serbjph2502120t. Acesso em: 6 maio 2026.
 
+<!-- ### PARTE 1.3 -->
+
+[^ahmad2025]: AHMAD, A.; SAPRY, H.; SEMAN, N.; JAMEEL, A. Reimagining job happiness: the role of algorithmic design in human-centered organizational well-being. Quantum Journal of Social Sciences and Humanities, 2025. DOI: https://doi.org/10.55197/qjssh.v6i4.756. Acesso em: 11 maio 2026.
+
+[^autili2024]: AUTILI, M.; DE SANCTIS, M.; INVERARDI, P.; PELLICCIONE, P. Engineering digital systems for humanity: a research roadmap. ACM Transactions on Software Engineering and Methodology, v. 34, p. 1-33, 2024. DOI: https://doi.org/10.1145/3712006. Acesso em: 11 maio 2026.
+
+[^baumer2017]: BAUMER, E. Toward human-centered algorithm design. Big Data & Society, v. 4, 2017. DOI: https://doi.org/10.1177/2053951717718854. Acesso em: 11 maio 2026.
+
+[^gomes2025]: GOMES, T.; SCHNEIDER, D.; CORREIA, A. Attention-capture damaging patterns in UI design: in search of a socio-technical mitigation strategy (short paper). p. 506-515, 2025. Acesso em: 11 maio 2026.
+
+[^hu2025]: HU, Z. Research on the impact of social media algorithmic on user decision-making: focus on algorithmic transparent and ethical design. Applied and Computational Engineering, 2025. DOI: https://doi.org/10.54254/2755-2721/2025.po24665. Acesso em: 11 maio 2026.
+
+[^kozyreva2019]: KOZYREVA, A.; LEWANDOWSKY, S.; HERTWIG, R. Citizens versus the internet: confronting digital challenges with cognitive tools. Psychological Science in the Public Interest, v. 21, p. 103-156, 2019. DOI: https://doi.org/10.1177/1529100620946707. Acesso em: 11 maio 2026.
+
+[^metzler2023]: METZLER, H.; GARCÍA, D. Social drivers and algorithmic mechanisms on digital media. Perspectives on Psychological Science, v. 19, p. 735-748, 2023. DOI: https://doi.org/10.1177/17456916231185057. Acesso em: 11 maio 2026.
+
+[^nopas2025]: NOPAS, D. Algorithmic learning or learner autonomy? Rethinking AI’s role in digital education. Qualitative Research Journal, 2025. DOI: https://doi.org/10.1108/qrj-11-2024-0282. Acesso em: 11 maio 2026.
+
+[^ramachandran2025]: RAMACHANDRAN, M.; SGARRO, V. The capability approach and a critique of the design of digital spaces. Science and Public Policy, 2025. DOI: https://doi.org/10.1093/scipol/scaf008. Acesso em: 11 maio 2026.
+
+[^roffarello2023]: ROFFARELLO, A.; LUKOFF, K.; DE RUSSIS, L. Defining and identifying attention capture deceptive designs in digital interfaces. Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems, 2023. DOI: https://doi.org/10.1145/3544548.3580729. Acesso em: 11 maio 2026.
+
+[^roffarello2025]: ROFFARELLO, A.; DE RUSSIS, L.; LUKOFF, K. The digital attention heuristics: supporting the user’s attention by design. ACM Transactions on Computer-Human Interaction, v. 32, p. 1-41, 2025. DOI: https://doi.org/10.1145/3725215. Acesso em: 11 maio 2026.
+
+[^serttas2025]: SERTTAŞ, A.; GÜRKAN, H.; DERE, G. Synthetic social alienation: the role of algorithm-driven content in shaping digital discourse and user perspectives. Journalism and Media, 2025. DOI: https://doi.org/10.3390/journalmedia6030149. Acesso em: 11 maio 2026.
+
+[^shin2024]: SHIN, Y. Toward human-centered artificial intelligence for users’ digital well-being: systematic review, synthesis, and future directions. JMIR Human Factors, v. 12, 2024. DOI: https://doi.org/10.2196/69533. Acesso em: 11 maio 2026.
+
+[^tzimourta2025]: TZIMOURTA, K. Human-centered design and development in digital health: approaches, challenges, and emerging trends. Cureus, v. 17, 2025. DOI: https://doi.org/10.7759/cureus.85897. Acesso em: 11 maio 2026.
+
+[^villamil2024]: VILLAMIL, A.; KING, S. A humane social learning-informed metaverse: cultivating positive technology experiences in digital learning environments. Cyberpsychology, Behavior and Social Networking, v. 27, p. 47-56, 2024. DOI: https://doi.org/10.1089/cyber.2023.0001. Acesso em: 11 maio 2026.
+
+[^zhang2022]: ZHANG, A.; BOLTZ, A.; WANG, C.; LEE, M. Algorithmic management reimagined for workers and by workers: centering worker well-being in gig work. Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems, 2022. DOI: https://doi.org/10.1145/3491102.3501866. Acesso em: 11 maio 2026.
+
+<!-- ### ESPECIAIS -->
+
+[^abs2022]: ABS, D. (2022). Contextos Digitais. e-lab, Instituto de Psicologia, USP (melhorar ref).
+
+[^bronfenbrenner1979]: BRONFENBRENNER, U. (1979). The Ecology of Human Development: Experiments by Nature and Design. Harvard University Press (melhorar ref).
+
 
 <!-- ### AINDA NÃO UTILIZADOS -->
-
-[^abs2022]: ABS, D. (2022). Contextos Digitais. e-lab, Instituto de Psicologia, USP.
 
 [^banker2019]: BANKER, Sridhar; KHETANI, Shivani. Algorithm Overdependence: How the Use of Algorithmic Recommendation Systems Can Increase Risks to Consumer Well-Being. Journal of Public Policy & Marketing, v. 38, p. 500 - 515, 2019. DOI: https://doi.org/10.1177/0743915619858057. Acesso em: 6 maio 2026.
 
 [^bogert2021]: BOGERT, Ethan; SCHECTER, Alec; WATSON, Rebecca. Humans rely more on algorithms than social influence as a task becomes more difficult. Scientific Reports, v. 11, 2021. DOI: https://doi.org/10.1038/s41598-021-87480-9. Acesso em: 6 maio 2026.
 
 [^brady2023]: BRADY, William J. et al. Algorithm-mediated social learning in online social networks. Trends in Cognitive Sciences, v. 27, n. 10, p. 947-960, 2023. DOI: https://doi.org/10.1016/j.tics.2023.06.008. Acesso em: 6 maio 2026.
-
-[^bronfenbrenner1979]: BRONFENBRENNER, U. (1979). The Ecology of Human Development: Experiments by Nature and Design. Harvard University Press.
 
 [^brown2025]: BROWN, Émilie. Recommended Selves: Authenticity and Algorithmic Filtering. Journal of the American Philosophical Association, 2025. DOI: https://doi.org/10.1017/apa.2025.10009. Acesso em: 6 maio 2026.
 
