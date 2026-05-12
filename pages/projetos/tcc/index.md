@@ -77,32 +77,45 @@ Em resumo, o design de algoritmos e plataformas orientado ao desenvolvimento hum
 
 ## 2 Objetivos
 
-### 2.1 Objetivo Geral  
+**Objetivo Geral:** Compreender as possibilidades de um design de algoritmo que contemple dimensões psicológicas e esteja orientado ao desenvolvimento humano. 
 
-1. Compreender as possibilidades de um design de algoritmo que contemple dimensões psicológicas e esteja orientado ao desenvolvimento humano. 
-
-### 2.2  Objetivos específicos 
-
-1. Analisar as plataformas; 
-2. Descrever a relação dos algoritmos dessas plataformas nos contextos digitais; 
-3. Contribuir com uma proposta de design de algoritmo orientado ao desenvolvimento humano. 
-
-<br>
+**Objetivos Específicos:** Analisar as plataformas digitais selecionadas em termos de seus mecanismos algorítmicos e os impactos sociais e psicológicos que promovem, à luz das vulnerabilidades discutidas na Sessão 1; Descrever a relação dos algoritmos dessas plataformas nos Contextos Digitais, identificando e caracterizando os padrões de design que exploram a atenção, reforçam vieses e minam a autonomia e o bem-estar do usuário, além de todos os outros pontos explorados nas sessões anteriores; Contribuir com uma proposta de design de algoritmos e plataformas orientados ao desenvolvimento humano, primeiramente para as plataformas selecionadas e possivelmente generalizando tais conceitos a fim de construir uma proposta legislativa a ser implementada no cenário brasileiro. 
 
 ## 3 Método
 
-### 3.1 Objetos de análise serão escolhidos e organizados a partir de três categorias de finalidades: 
+### 3.1 Objetos de análise 
 
-1) Comunicação : xxxx 
+Os objetos de análise serão plataformas digitais de amplo uso na sociedade brasileira, cujos algoritmos intrínsecos possuam comprovada correlação com os impactos sociais e psicológicos apontados como questões de cibersegurança, todos discutidos na Sessão 1. Elas serão divididas nas três categorias abaixo para garantir uma abrangência dos diferentes contextos de interação digital.
 
-2) Consumo: xxxx 
+**Comunicação:** Plataformas e algoritmos que permeiam o acesso a comunicação e que mediam laços sociais, garantem acesso à informação e direito à comunicação, e implicam em formação de opinião. **Possíveis exemplos:** Instagram, X (antigo Twitter), WhatsApp, Google Meet, ConferênciaWeb (adicionar referências para cada um deles).
 
-3) Utilitário: xxxx
+**Consumo/Entretenimento:** Plataformas de conteúdo em feed, onde o design é otimizado para o engajamento contínuo, utilizando padrões que exploram vulnerabilidades atencionais e promovem padrões aditivos (vício) com implicações na homogeneização do pensamento dos usuários. **Possíveis exemplos:** TikTok, Yotube, Instagram, X, Shein, Shopee, Amazon Prime e Amazon Prime Vídeo, Netflix, entre outros (adicionar referências para cada um deles).
 
-### 3.2 Processo de coleta: xxxx
+**Utilitário:** Plataformas cujos algoritmos atuam como utilitários no dia a dia da população, geralmente para intermediar o acesso à informações essenciais, que antes eram disponíveis por dispositivos, ferramentas e objetos físicos. **Possíveis exemplos:** Google Maps, Google Search, Waze, LinkedIn, entre outros (adicionar referência para cada um deles).
 
-### 3.3 Procedimentos de análise: Os dados coletados serão analisados a partir do modelo de análise dos Contextos Digitais (ABS, 2022). 
+### 3.2 Processo de coleta
 
+Ainda estamos definindo quais serão os processos de coleta. Uma sugestão seria a coleta de dados de natureza qualitativa e dividia em três eixos, objetivando mapear a arquitetura algorítmica e sua interface com a experiência subjetiva do usuário.
+
+**Análise de Padrões de Design:** Realização de uma uma investigação sistemática das interfaces das plataformas selecionadas, identificando e catalogando padrões de design que exploram vulnerabilidades atencionais e cognitivas, tais como infinite scroll, uso de notificações, mecanismos de recompensa intermitente e opacidade nas regras de recomendação, entre outros a serem definidos e descobertos.
+
+**Coleta da Experiência Subjetiva:** Condução de estudos de usuários (entrevistas semiestruturadas ou inquéritos) para coletar dados qualitativos sobre a vivência dos indivíduos com os algoritmos e com as plataformas, focando em sentimentos de ansiedade, estresse, perda de autonomia e confiança, em alinhamento com a dimensão da cibersegurança e seus impactos psicológicos.
+
+**Análise Documental de Transparência:** Investigação minuciosa das políticas de uso, termos de serviço e documentações técnicas públicas das plataformas para avaliar o nível de transparência algorítmica oferecido e a existência de mecanismos de feedback, intervenção humana, e personalização/configuração por parte do usuário.
+
+### 3.3 Procedimentos de análise
+
+Os dados coletados serão analisados a partir do modelo de análise dos Contextos Digitais[^abs2022]. Este referencial teórico-metodológico será utilizado como lente para relacionar os padrões de design de algoritmos identificados com os impactos psicológicos e sociais vivenciados pelos usuários, como a manipulação, o enfraquecimento de laços significativos e a polarização, conforme as bases da Sessão 1. Além disso, será possível utilizar o modelo para estruturar o diagnóstico de como a arquitetura das plataformas viola os pilares de desenvolvimento humano (autonomia, competência, vínculo) no ecossistema digital. Finalmente, o diagnóstico detalhado servirá de base factual e teórica para a construção da proposta de design de algoritmo orientada ao desenvolvimento humano, garantindo que as soluções propostas enderecem as falhas específicas identificadas através do modelo de Contextos Digitais.
+
+## 4 Próximos Passos
+
+* Revisão bibliográfica minuciosa
+
+* Seleção dos objetos de análise
+
+* Refinamento das técnicas de análise
+
+* Produção das sessões 4) Análise, 5) Discussão, 6) Propostas, 7) Conclusões
 
 
 <!-- <br> -->
@@ -139,7 +152,7 @@ Em resumo, o design de algoritmos e plataformas orientado ao desenvolvimento hum
 
 
 
-## Referências
+## 5 Referências
 
 <!-- ### PARTE 1.1 -->
 
