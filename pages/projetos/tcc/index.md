@@ -119,6 +119,8 @@ Os dados coletados serão analisados a partir do modelo de análise dos Contexto
 
 * Declaração de uso de LLMs, que a princípio será apenas para fins bibliográficos.
 
+OBS: É possível que essa proposta seja atualizada nos próximos dias.
+
 <!-- <br> -->
 <!---->
 <!-- ## 4 Analise  -->
