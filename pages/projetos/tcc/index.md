@@ -109,14 +109,15 @@ Os dados coletados serão analisados a partir do modelo de análise dos Contexto
 
 ## 4 Próximos Passos
 
-* Revisão bibliográfica minuciosa
+* Revisão bibliográfica minuciosa;
 
-* Seleção dos objetos de análise
+* Seleção dos objetos de análise;
 
-* Refinamento das técnicas de análise
+* Refinamento das técnicas de análise;
 
-* Produção das sessões 4) Análise, 5) Discussão, 6) Propostas, 7) Conclusões
+* Produção das sessões 4) Análise, 5) Discussão, 6) Propostas, 7) Conclusões;
 
+* Declaração de uso de LLMs, que a princípio será apenas para fins bibliográficos.
 
 <!-- <br> -->
 <!---->
